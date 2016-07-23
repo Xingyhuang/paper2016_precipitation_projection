@@ -170,7 +170,7 @@ CESM is a state-of-the-art Earth modeling framework, consisting of coupled atmos
 
 %The coupling infrastructure in CESM communicates the interfacial states and fluxes between each component model to ensure conservation. Since we follow AMIP protocols, only the atmosphere and land model are integrated dynamically. The FAMIPC5 (F$\_$AMIP$\_$CAM5) component set, which mainly supports atmospheric, oceanic, land and sea ice models, is chosen for these simulations. In CAM5, cloud microphysics is parameterized using the two-moment scheme with with ice supersaturation \citep{ morrison2008new, gettelman2008new}, and the deep convection process is treated by Zhang and McFarlane (ZM) cumulus scheme \citep{zhang1995sensitivity}. A more detailed discussion of the CAM5 configuration can be found in \citet{neale2010description}.
 
-Simulations have been performed for the historical period (1979-2005, hereafter referred to as hist) and for two future periods: 2024-2050 (hereafter referred to as mid) and 2074-2100 (hereafter referred to as end). For purposes of analysis, the first year of each time period was discarded as a spin-up period to allow adequate time for the initialized land and atmosphere to equilibrate. The 26-year duration was chosen to provide an adequate sampling of annual variability for each time phase. For future projections, GHG concentrations are set based on RCP8.5. Historical SSTs and sea ice are prescribed at 1$^\circ$ resolution, as described by \citet{hurrell2008new}. SSTs and sea ice for each future period are developed from fully-coupled RCP 8.5 climate simulations with  bias correction applied (Cecile Hannay, personal communication).  Using prescribed SSTs in place of a coupled ocean model considerably reduces the computation cost and so allows the atmospheric model to be run at a higher overall resolution. Annually-updated land surface datasets, which prescribe land-use characteristics, are interpolated from $0.5^\circ$ to the land model grid.
+Simulations have been performed for the historical period (1979-2005, hereafter referred to as \textsf{hist}) and for two future periods: 2024-2050 (hereafter referred to as \textsf{mid}) and 2074-2100 (hereafter referred to as \textsf{end}). For purposes of analysis, the first year of each time period was discarded as a spin-up period to allow adequate time for the initialized land and atmosphere to equilibrate. The 26-year duration was chosen to provide an adequate sampling of annual variability for each time phase. For future projections, GHG concentrations are set based on RCP8.5. Historical SSTs and sea ice are prescribed at 1$^\circ$ resolution, as described by \citet{hurrell2008new}. SSTs and sea ice for each future period are developed from fully-coupled RCP 8.5 climate simulations with  bias correction applied (Cecile Hannay, personal communication).  Using prescribed SSTs in place of a coupled ocean model considerably reduces the computation cost and so allows the atmospheric model to be run at a higher overall resolution. Annually-updated land surface datasets, which prescribe land-use characteristics, are interpolated from $0.5^\circ$ to the land model grid.
 
 %The historical simulations cover the period of year 1979 through 2005 (Hereafter as Hist), representing the reference period for model evaluation and for the calculation of climate changes. The transient future projections cover two periods including near future 2024-2050 (Hereafter as Mid) and late-century 2074-2100 (Hereafter as End). 
 %including plant functional types
@@ -198,7 +198,9 @@ Ensemble runs are needed to ensure that the sample adequately accounts for clima
 
 \section{Methodology} \label{sec:Methodology}
 
-In order to thoroughly capture the features of precipitation distributions, all the daily output are utilized to account for varied precipitation events occurring in different seasons for diverse climate regions. As a common approach, indices are employed to depict the behaviors of precipitation \citep{tebaldi2006going, zhang2011indices, sillmann2013climate}. Multiple relevant indices have been tested including those defined by the Expert Team on Climate Change Detection and Indices (ETCCDI) and others from previous studies depicting either the percentiles, maximum value, or the events changes of precipitation. Loosely based on those former indices, we end up with a new sets of quantities that better fit our purpose, with the consideration of easy interpretation and relevance for policy makers. The indices employed are summarized in Table \ref{tab:table1} characterizing the different ranges of precipitation distributions.
+\subsection{Precipitation indices}
+
+{\color{red}In order to capture the features of precipitation distributions, all the daily output are utilized to account for varied precipitation events occurring in different seasons for diverse climate regions. [Unclear]} We have employed standard indices to characterize precipitation \citep{tebaldi2006going, zhang2011indices, sillmann2013climate}. Several indices have been examined, including those defined by the Expert Team on Climate Change Detection and Indices (ETCCDI) {\color{red}[citation needed]} {\color{red}and others [be explicit] from previous studies [what studies?]} that evaluate percentiles, maximum values, or {\color{red}the events changes of precipitation [?]}. The indices we have chosen for this study attempt to provide a relatively comprehensive characterization of precipitation, along with being easy to interpret and relevant to stakeholders.  The indices employed are summarized in Table \ref{tab:table1}.
 
 %indices:  zhang2010influence, duliere2011extreme, 
 %In this study, we have used selected indices in previous studies  \citep{tebaldi2006going, zhang2010influence, duliere2011extreme, zhang2011indices, sillmann2013climate} and also defined other indices that are suitable, well interpreted and describe extremes in a comprehensive and objective way. 
@@ -208,10 +210,14 @@ In order to thoroughly capture the features of precipitation distributions, all 
 
 %The indices are loosed based on the ones defined by the Expert Team on Climate Change Detection and Indices (ETCCDI), which have been widely accepted and applied.
 
+\subsection{Impacts of ENSO}
 
-ENSO is also investigated in our study due to its important effects in regulating the precipitation over large part of our study area, especially in southwest U.S. \citep{cayan1999enso, zhang2010influence, deser2012communication, yoon2015increasing}. The phase of ENSO (i.e. El Ni\~no and La Ni\~na) is identified for each year by the Oceanic Ni\~no Index (ONI), defined as the 3-month running means of SST anomalies in the Ni\~no 3.4 region (covering 5N-5S, 120-170W based on \cite{noaaElNino}). A full-fledged El Ni\~no or La Ni\~na episode is identified when the ONI exceeds +0.5 or -0.5 for at least five consecutive months \citep{noaaElNino} (see the supplement). The base SST climatologies are derived from the mean of the period for year 1971-2000, 2020-2050 and 2070-2100 for Hist, Mid and End respectively, using the observed SST dataset and predicted SST dataset as aforementioned. In order to separate the SST changes from the influence of climate forcing, the SST values for future time period have been detrended before calculating the ONI index. 
 
-Some studies argue that Ni\~no 3.4 can not capture ENSO well (like \cite{kao2009contrasting}), and we tried to widen the location (from 105W to 170W rather than from 120W to 170W ). It turns out that the SST anomaly of each year is quite similar to what we got from Ni\~no 3.4, especially for future periods. Therefore, we presume it won't really affect our results whether the location extends or not. ({\color{red}might remove this?})
+The impact of ENSO on precipitation is emphasized in our study due to its impact in regulating the precipitation over a majority of our study area, particularly in the southwest U.S. \citep{cayan1999enso, zhang2010influence, deser2012communication, yoon2015increasing}. The phase of ENSO (\textit{i.e.} El Ni\~no and La Ni\~na) is identified each year using the Oceanic Ni\~no Index (ONI), defined as the 3-month running means of SST anomalies in the Ni\~no 3.4 region (covering 5N-5S, 120-170W based on \cite{noaaElNino}). An El Ni\~no or La Ni\~na episode is said to occur when the ONI exceeds +0.5 or -0.5 for at least five consecutive months \citep{noaaElNino} (see the supplement). In order to remove the trend in the SST field associated with climate change, the anomaly is computed against the detrended mean SSTs from the periods 1971-2000, 2020-2050 and 2070-2100 for \textsf{hist}, \textsf{mid} and \textsf{end} respectively, using the aforementioned observed and predicted SST datasets.
+
+%In order to separate the SST changes from the influence of climate forcing, the SST values for future time period have been detrended before calculating the ONI index. 
+
+Some studies argue that Ni\~no 3.4 does not capture the ENSO signal well (like \cite{kao2009contrasting}), and so we have tried to widen the location (from 105W to 170W rather than from 120W to 170W ). It turns out that the SST anomaly of each year is quantitatively similar {\color{red}[if you include this you might need to quantify ``similar'']} to Ni\~no 3.4, particularly for the future period. Therefore, we presume it won't really affect our results whether we use the extended location or not. ({\color{red}might remove this?})
 
 %linear regression is applied to signaling the factor effects due to ENSO and climate forcing. Firstly, we get the phase of ENSO over each year including El Ni\~no, La Ni\~na and normal state at each grid point over our study area followed by the way of ENSO 3.4 (add citation here) (add more details about how ENSO is calculated over each time period). Next, we naturally divide climate forcing into three scenarios represented by each time period. The features of wet or dry spell as we described above are used as response variable. Mathematically, the regression relationship can be written as, (add equation and explain it here).
 
@@ -219,7 +225,7 @@ Some studies argue that Ni\~no 3.4 can not capture ENSO well (like \cite{kao2009
 
 %(fulfill the model assumption (p-norm) and the sizes should be enough)
 
-Student's t-test has been used to test whether two sets of dataset at each grid point are statistically significantly different, if the sample population can be adequately described by a normal distribution. The normality of a dataset is assessed under the Anderson-Darling test. When the sample populations do not approximately follow a normal distribution, Mann-Whitney-Wilcoxon (MWW) test is employed in lieu of the t-test. All these tests are evaluated at the 0.05 ($\alpha$) significance level.
+Student's t-test has been used to test whether or not two datasets at each grid point are statistically equivalent, if the sample population can be adequately described by a normal distribution. The normality of a dataset is assessed under the Anderson-Darling test. When the sample populations do not approximately follow a normal distribution, Mann-Whitney-Wilcoxon (MWW) test is employed in lieu of the t-test. All these tests are evaluated at the 0.05 ($\alpha$) significance level.
 
 %statistical significance for necessary variables: note the ad.test is based on sample size >7, therefore, this does not fit for extreme events that happen too less, combined all ensembles to get enough sample size
 
@@ -229,14 +235,15 @@ Student's t-test has been used to test whether two sets of dataset at each grid 
 
 \subsection{Reference datasets}
 
-Gridded observational datasets and reanalysis of the highest available quality with comparable horizontal resolutions are used for model evaluation. The use of multiple reference datasets is necessary due to the underlying uncertainty in the reference data. Descriptions of these datasets are as follows.
+Gridded observational datasets and reanalysis of the highest available quality that feature comparable horizontal resolutions are used for assessing the simulation quality. The use of multiple reference datasets is necessary due to the underlying uncertainty in the reference data. Descriptions of the datasets employed are as follows.
 
-\paragraph{UW} The UW daily gridded meteorological data is obtained from the Surface Water Modeling group at the University of Washington \citep{maurer2002long, hamlet2005production}. UW incorporates topographic corrections for the precipitation. The dataset is provided at 0.125$^\circ$ horizontal resolution covering the period 1949 to 2010.
+\begin{itemize}
+\item[] \textbf{UW Precipitation Dataset:}  The UW daily gridded meteorological data is obtained from the Surface Water Modeling group at the University of Washington \citep{maurer2002long, hamlet2005production}. UW incorporates topographic corrections for the precipitation. The dataset is provided at 0.125$^\circ$ horizontal resolution covering the period 1949 to 2010.
 
-\paragraph{NCEP CPC} This dataset provides gauge-based analysis of daily precipitation from the National Oceanic and Atmospheric Administration (NOAA) Climate Prediction Center (CPC). It is a suite of unified precipitation products obtained by combining all information available at CPC via the optimal interpolation objective analysis technique. The gauge analysis covers the Conterminous United States with a fine-resolution at 0.25$^\circ$ from 1948-01-01 to 2006-12-31.
+\item[] \textbf{NCEP CPC:}  This dataset provides gauge-based analysis of daily precipitation from the National Oceanic and Atmospheric Administration (NOAA) Climate Prediction Center (CPC). It is a suite of unified precipitation products obtained by combining all information available at CPC via the optimal interpolation objective analysis technique. The gauge analysis covers the Conterminous United States with a fine-resolution at 0.25$^\circ$ from 1948-01-01 to 2006-12-31.
 
-\paragraph{NARR}  The North American Regional Reanalysis (NARR) is the NCEP (National Centers for Environmental Prediction) high-resolution reanalysis product that provides dynamically downscaled data over North America at $\sim$32 km resolution and 3-hourly intervals from 1979 through present \citep{mesinger2006north}.
-
+\item[] \textbf{North American Regional Reanalysis (NARR):}  The is the NCEP (National Centers for Environmental Prediction) high-resolution reanalysis product that provides dynamically downscaled data over North America at $\sim$32 km resolution and 3-hourly intervals from 1979 through present \citep{mesinger2006north}.
+\end{itemize}
 
 %Differences between gridded observations can be due to the choice of meteorological stations, interpolation techniques, elevation models and processing algorithms.
 
@@ -484,22 +491,22 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 % TABLES
 \begin{table}
 \begin{center}
-\caption{Precipitation indices used in this study.} \label{tab:table1}
-\begin{tabular*}{5.0in}{l @{\extracolsep{\fill}}cc}
+\caption{Precipitation indices employed in this study. {\color{red}[what do you mean by ``averaged over each time period''?]}} \label{tab:table1}
+\begin{tabular*}{5.0in}{l @{\extracolsep{\fill}}lc}
 \hline \textbf{} & Name & Definition \\
-\hline & Pr & Mean daily precipitation averaged over each time period. unit: mm/day\\
-\hline & SDII & Simple precipitation intensity index: Precipitation amount/rainy days (Pr$>$1 mm). unit: mm/day \\
-\hline & R1mm & Number of days with Pr$>$1 mm per year averaged over each time period \\
-\hline & R5mm & Number of days with Pr$>$1 mm and Pr$=<$5 mm per year averaged over each time period\\
-\hline & R10mm & Number of days with Pr$>$5 mm and Pr$=<$10 mm per year averaged over each time period\\
-\hline & R20mm & Number of days with Pr$>$10 mm and Pr$=<$20 mm per year averaged over each time period\\
-\hline & R40mm & Number of days with Pr$>$20 mm and Pr$=<$40 mm per year averaged over each time period\\
-\hline & Rxmm & Number of days with Pr$>$40 mm per year averaged over each time period\\
-\hline & F1mm & Fraction of precipitation contributed to the total precipitation for days of R1mm.\\ 
- &             & Similarly for F5mm, F10mm, F20mm,  F40mm and Fxmm\\
-\hline & P5mm & Precipitation amount resulted from R5mm; Similarly for P10mm, P20mm, P40mm and Pxmm\\
+\hline & Pr & Mean daily precipitation, averaged over each time period (mm/day) \\
+\hline & R1mm & Number of days per year with Pr$>$1 mm, averaged over each time period \\
+\hline & SDII & Simple precipitation intensity index: Precipitation amount / $\langle$ R1mm $\rangle$ (mm/day) \\
+\hline & R5mm & Number of days per year with Pr$>$1 mm and Pr$=<$5 mm, averaged over each time period\\
+\hline & R10mm & Number of days per year with Pr$>$5 mm and Pr$=<$10 mm, averaged over each time period\\
+\hline & R20mm & Number of days per year with Pr$>$10 mm and Pr$=<$20 mm, averaged over each time period\\
+\hline & R40mm & Number of days per year with Pr$>$20 mm and Pr$=<$40 mm, averaged over each time period\\
+\hline & Rxmm & Number of days per year with Pr$>$40 mm, averaged over each time period\\
+\hline & F1mm & Fraction of precipitation contributed to the total precipitation for days of R1mm\\ 
+ & & (similarly for F5mm, F10mm, F20mm,  F40mm and Fxmm) \\
+\hline & P5mm & Precipitation amount from R5mm \\
+ & & (similarly for P10mm, P20mm, F40mm,  Pxmm) \\
 \hline 
-\hline
 \end{tabular*}
 \end{center}
 \end{table}

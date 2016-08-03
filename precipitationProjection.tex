@@ -243,7 +243,7 @@ Student's t-test has been used to test whether or not two datasets at each grid 
 %statistical significance for necessary variables: note the ad.test is based on sample size >7, therefore, this does not fit for extreme events that happen too less, combined all ensembles to get enough sample size
 
 
-{\color{red}(add description of the supplement like what are included)}
+{\color{red}(add description of the supplement like what are included; see the sst$\_$enso.pdf, mask the land (over land, it should the surface temperature.))}
 
 
 \subsection{Reference datasets}
@@ -315,6 +315,8 @@ CESM at 1 degree resolution was also assessed in order to better understand the 
 %a globally uniform CESM run at 0.25$^\circ$ http://portal.nersc.gov/c20c/data/LBNL/CAM5-1-025degree/All-Hist/est1/v1-0/day/atmos/ ; also see /home/paullric/cam5data
 
 \section{Drivers of climatological precipitation}
+
+Precipitation has been observed and modeled to being changed regionally and globally under climate warming as discussion in the introduction part. 
 
 {\color{red}[To be filled in based on earlier discussion based on the literature]}
 
@@ -400,9 +402,9 @@ When comparing \textsf{hist} to \textsf{mid}, the total rainy days and frequency
 
 %The combined changes of those is displayed when comparing Hist and End.
 
-As for extreme precipitation frequency (i.e. days with daily Pr between 10 mm and 40 mm), the number of days increases from \textsf{hist} to \textsf{mid}, but the pattern of  is scattered over northwest and central WUS. When comparing \textsf{mid} to \textsf{end}, there is a clear and significant increase in extreme precipitation events over the northwest coastal area and eastern flank of the Cascades. This result is consistent with \cite{dominguez2012changes}, who observe a robust increase in winter precipitation extremes toward the latter half of the 21st century {\color{red}using RCMs [an ensemble of RCMs?]}.
+As for extreme precipitation frequency (i.e. days with daily Pr between 10 mm and 40 mm), the number of days increases from \textsf{hist} to \textsf{mid}, but the pattern is scattered over northwest and central WUS. When comparing \textsf{mid} to \textsf{end}, there is a clear and significant increase in extreme precipitation events over the northwest coastal area and eastern flank of the Cascades. This result is consistent with \cite{dominguez2012changes}, who observe a robust increase in winter precipitation extremes toward the latter half of the 21st century {\color{red}using RCMs [an ensemble of RCMs?]}.
 
-There is a slight, but insignificant decrease over the Cascades and the Sierra Nevada (significance is low due to the high variability of precipitation). For very extreme precipitation (Pr$>=$40 mm) events, there is an increasing trend over the northwest coast and the Cascades and its eastern flank. The corresponding changes in rain amount are consistent with the changes of frequency (see Figure \ref{fig:Figure 6}). Overall, these results indicate more extreme precipitation over the northwest U.S.
+There is a slight, but insignificant decrease over the Cascades and the Sierra Nevada (significance is low due to the high variability of precipitation){\color{red}[Huang: ?]}. For very extreme precipitation (Pr$>=$40 mm) events, there is an increasing trend over the northwest coast and the Cascades and its eastern flank. The corresponding changes in rain amount are consistent with the changes of frequency (see Figure \ref{fig:Figure 6}). Overall, these results indicate more extreme precipitation over the northwest U.S.
 
 ({\color{red} might add the specific percentages for further illustrations})
 
@@ -416,7 +418,21 @@ There is a slight, but insignificant decrease over the Cascades and the Sierra N
 
 \subsubsection{Quantile correlation analysis}
 
-{\color{red}[Motivating question:  Can changes in mean precipitation be used to predict changes in extreme precipitation?]}
+%{\color{red}[Motivating question:  Can changes in mean precipitation be used to predict changes in extreme precipitation?]}
+
+To see if changes in mean precipitation can be used to predict changes in extreme precipitation features, the correlations between Pr and specific quantiles have been calculated. Here, selected quantiles including the values at 70$\%$ (70p), 80$\%$ (80p), 90$\%$ (90p), 95$\%$ (95p) and 99$\%$ (99p) are applied based on the all the daily precipitation data at each grid point within each time period. These quantiles are chosen in order to account for the changes of both moderation and extreme precipitation. The mean Pr and those quantiles for \textsf{hist}, and the differences of these quantities among different time periods can be found in the supplemental figure. Within expectation, regions with higher Pr are attributed with larger values of those quantiles, i.e. stronger precipitation extremes.
+
+%The spatial correlations between the changes of Pr and the changes of the designed quantiles in future can be found in Table \ref{tab:table2}. 
+
+Spatial correlation is assessed by computing Pearson product-moment coefficient of linear correlation between relevant variables. It is found that the absolute changes of Pr in future are positively related with the absolute changes of the quantiles. This relationship is at a moderate level between \textsf{mid} and \textsf{hist} (larger than 0.65), and becomes stronger when going to the \textsf{end} period (reaching $\sim$0.96). Consistently, the mean Pr itself is also positively correlated with the absolute changes of the quantiles in future (around 0.5 to 0.78), except 70p between \textsf{end} and \textsf{mid} and 99p \textsf{mid} and \textsf{hist}. 
+
+The relative changes of quantiles are also related with the relative changes of Pr with correlations around 0.65 to 0.85, except 70p and 80p between \textsf{end} and \textsf{mid}. So, the area featured with higher increase of extreme precipitations in future also tends to have larger increase of its mean precipitation. However, the wetter area does not necessary have more intense changes of moderate and extreme precipitation than drier area.
+
+{\color{red}might remove 70p}
+
+%However, it seems that wetter area tends to have more intense changes of moderate precipitation including 70p, 80p and 90p in future than drier area at a moderate level (around 0.6). However, for the relatively very extreme precipitation around 95p, the relationship is opposite, i.e. wetter area tends to have less intense changes of very extreme precipitation in future than drier area also at a moderate level (around 0.6).
+
+%also, from the P99, we can see that the area with less precipitation may expect more intense changes of extremes in futures. This might related with the larger capacity for the water vapor content for relatively dry area as temperatures increase similarly over all area
 
 \subsubsection{Isolating differences due to climate change and ENSO}
 
@@ -543,7 +559,7 @@ Based on the above results, it can be seen that the magnitude of the effects of 
 
 \section{Discussion and Summary} \label{sec:Summary}
 
-In this study, the North Pacific Oscillation (NPO) is not analyzed as its decadal duration making it difficult to capture within the 26 years simulation time period. Further, as argued by \cite{pierce2002role}, the NPO does not respond to the same internal atmospheric variability as ENSO, and so no significant {\color{red}improvement [improvement in what?]} can be obtained to account for the ENSO's effects by incorporating accurate predictions of NPO SSTs. 
+In this study, the North Pacific Oscillation (NPO) is not analyzed as its decadal duration making it difficult to capture within the 26 years simulation time period. Further, as argued by \cite{pierce2002role}, the NPO does not {\color{red}[Huang: does not?]}respond to the same internal atmospheric variability as ENSO, and so no significant {\color{red}improvement [improvement in what?]} can be obtained to account for the ENSO's effects by incorporating accurate predictions of NPO SSTs. 
 
 The associated precipitation signal under a warmer climate is more ambiguous for California \citep{neelin2013california} considering the extreme variability on interannual time scales \citep{dettinger2011climate}. \cite{kim2005projection} found that under global warming, heavy precipitation events show largest increases in the mountainous regions of the northern California Coastal Range and the Sierra Nevada. However, our results show a minor decrease (though not statistically significant) of extreme precipitation over the Sierra Nevada. 
 
@@ -697,7 +713,6 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 \label{fig:Figure 8}
 \end{center}
 \end{figure}
-
 
 
 \end{document}

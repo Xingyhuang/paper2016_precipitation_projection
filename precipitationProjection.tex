@@ -224,8 +224,9 @@ Ensemble runs are needed to ensure that the sample adequately accounts for clima
 
 \subsection{Impacts of ENSO}
 
+The impact of ENSO on precipitation is emphasized in our study due to its influence on precipitation over a majority of our study area, particularly in the southwest U.S. \citep{cayan1999enso, zhang2010influence, deser2012communication, yoon2015increasing}. The phase of ENSO (\textit{i.e.} El Ni\~no and La Ni\~na) is identified each year using the Oceanic Ni\~no Index (ONI), defined as the 3-month running means of SST anomalies in the Ni\~no 3.4 region (covering 5N-5S, 120-170W based on \cite{noaaElNino}). An El Ni\~no or La Ni\~na episode is said to occur when the ONI exceeds +0.5 or -0.5 for at least five consecutive months for a water year (i.e. from July to June) \citep{noaaElNino} (see the supplement). In order to remove the trend in the SST field associated with climate change, the anomaly is computed against the detrended mean SSTs from the periods 1971-2000, 2020-2050 and 2070-2100 for \textsf{hist}, \textsf{mid} and \textsf{end} respectively, using the aforementioned observed and predicted SST datasets. As argued by \cite{kao2009contrasting}, an extended Ni\~no 3.4 region may be necessary to determine the phase of ENSO -- to determine if this was the case, SST anomalies were integrated over the region 105-170W, but it was observed that this had no significant impact on ONI statistics.
 
-The impact of ENSO on precipitation is emphasized in our study due to its influence on precipitation over a majority of our study area, particularly in the southwest U.S. \citep{cayan1999enso, zhang2010influence, deser2012communication, yoon2015increasing}. The phase of ENSO (\textit{i.e.} El Ni\~no and La Ni\~na) is identified each year using the Oceanic Ni\~no Index (ONI), defined as the 3-month running means of SST anomalies in the Ni\~no 3.4 region (covering 5N-5S, 120-170W based on \cite{noaaElNino}). An El Ni\~no or La Ni\~na episode is said to occur when the ONI exceeds +0.5 or -0.5 for at least five consecutive months \citep{noaaElNino} (see the supplement). In order to remove the trend in the SST field associated with climate change, the anomaly is computed against the detrended mean SSTs from the periods 1971-2000, 2020-2050 and 2070-2100 for \textsf{hist}, \textsf{mid} and \textsf{end} respectively, using the aforementioned observed and predicted SST datasets. As argued by \cite{kao2009contrasting}, an extended Ni\~no 3.4 region may be necessary to determine the phase of ENSO -- to determine if this was the case, SST anomalies were integrated over the region 105-170W, but it was observed that this had no significant impact on ONI statistics.
+%***detrend has been tested using 2020-2100 and 1971-2100, it seems the differences are negligible.
 
 %, particularly for the future period and won't really affect our results
 %In order to separate the SST changes from the influence of climate forcing, the SST values for future time period have been detrended before calculating the ONI index. 
@@ -245,6 +246,7 @@ Student's t-test has been used to test whether or not two datasets at each grid 
 
 {\color{red}(add description of the supplement like what are included; see the sst$\_$enso.pdf, mask the land (over land, it should the surface temperature.))}
 
+%cesm_25_wd_wet_dry_annual_yr_allruns_v2.pdf is based on each water year, i.e. totally 25 years
 
 \subsection{Reference datasets}
 
@@ -304,11 +306,17 @@ The corresponding contribution fraction to total precipitation amount of each ra
 %"In particular, the complex topography of the Cascades and Sierra Nevada ranges is represented in the high-resolution RegCM3, and the model captures the peak precipitation in the Intermountain Regions. However, some biases exist in simulating extreme precipitation over the topographically complex regions [Wang et al., 2009; Walker and Diffenbaugh, 2009], with excess extreme precipitation over high elevations being attributed to excessively strong winds in RegCM3 [Walker and Diffenbaugh, 2009]."
 %
 
-{\color{red}As further supported in \cite{huang2016evaluation} by evaluating VR-CESM also at 0.25$^\circ$ for long-term regional climate modeling over California, it is found that VR-CESM can adequately represented regional climatological patterns with high spatial correlations. VR-CESM shows comparable performance as WRF at 27 km, but still  overestimated overall winter precipitation (about 25$\%$-35$\%$) compared to reference datasets, with statistically significant difference over the western edge of the Sierra Nevada, which can be alleviated by increasing the spatial resolution due to improved treatment of orographic effects. The spatial pattern of variability agrees well between VR-CESM and references and when assessing the frequency of strong precipitation events, VR-CESM matched closely to the UW dataset everywhere except the Central Valley.} 
+{\color{red}As further supported in \cite{huang2016evaluation} by evaluating VR-CESM also at 0.25$^\circ$ for long-term regional climate modeling over California, it is found that VR-CESM can adequately represented regional climatological patterns with high spatial correlations. VR-CESM shows comparable performance as WRF at 27 km, but still  overestimated overall winter precipitation (about 25$\%$-35$\%$) compared to reference datasets, with statistically significant difference over the western edge of the Sierra Nevada, which can be alleviated by increasing the spatial resolution due to improved treatment of orographic effects. The spatial pattern of variability agrees well between VR-CESM and references and when assessing the frequency of strong precipitation events, VR-CESM matched closely to the UW dataset everywhere except the Central Valley.}
 
 CESM at 1 degree resolution was also assessed in order to better understand the impacts of resolution. We find that precipitation patterns over complex topography are {\color{red}poorly represented without capturing the spatial patterns induced by orographic effects over the Cascades and Sierra Nevada} by uniform CESM at 1 degree, with total precipitation greatly underestimated, when compared to VR-CESM, gridded data and reanalysis (see the supplement). {\color{red}Basically, the precipitation has been smooth out at the coastal area and the mountainous regions over northwest U.S when simulated with CESM at coarse resolution.} This result clearly captures the benefits of high resolution (particularly the representation of topography) in simulating precipitation features. Results are also provided for the output from a globally uniform CESM run at 0.25$^\circ$ spatial resolution with the finite volume (FV) dynamical core \citep{wehner2014effect}, exhibiting comparable performance to VR-CESM (see the supplement).
 
+We have also assessed the ENSO effect modeled by VR-CESM identified by the difference of precipitation behaviors between the warm phase (i.e. El Ni\~no) and cool phase (i.e. La Ni\~na) of ENSO, compared to references (see the supplement). The impact of ENSO for observational precipitation has a weaker signal compared to the VR-CESM, which might suggest that the model has an overestimation of ENSO's impact on precipitation, especially over the northwest U.S. The improvement of ENSO in the model is directly proportional to the representation of ENSO forced precipitation anomalies \citep{achutarao2006enso}. {\color{red}(Is it ok to put it here?)}
+
+%of the dipole effect 
+
 {\color{red} (For the t-test among different time periods, I use the yearly values of each run.)}
+
+%{\color{red} [Huang: will add the assessment of ENSO effect for hist and obs in the model assessment part]}
 
 %see wd_index_hist_1deg_cesm.pdf and wd_index_hist_0.25deg_cesm.pdf at /Users/xingyinghuang/Desktop/untitled folder/data analysis/Extremes_WUS; also see the wdevent_ttest_wilcoxtest_Hist_vs_obs(UW_CPC_ASD_NARR)_v2.pdf 
 
@@ -316,11 +324,13 @@ CESM at 1 degree resolution was also assessed in order to better understand the 
 
 \section{Drivers of climatological precipitation}
 
-Precipitation has been observed and modeled to being changed regionally and globally under climate warming as discussion in the introduction part. 
+{\color{red} Precipitation has been observed and modeled to being changed regionally and globally under climate warming as discussion in the introduction part. According to \cite{min2011human}, the observed intensification of heavy precipitation events over the the latter half of the twentieth century are attributed to the human-induced increases in GHGs over majority of Northern Hemisphere land areas, though no significant changes in total precipitations could be observed globally \citep{trenberth2011changes}. With the combined effects of CO$_2$ increase and SST increase in future, the precipitations are assumed to be changed driven by both the radiative changes in the lower troposphere and increased water vapor evaporation over the ocean \citep{allen2002constraints, sugi2004mechanism}. Precipitation extremes are projected to be intensified continually through the end of 21st century in the both dry and wet regions globally with heterogeneous spatial patterns \citep{donat2016more}.  
 
-{\color{red}[To be filled in based on earlier discussion based on the literature]}
 
-{\color{red}[Increased temperatures will lead to higher water vapor content over the ocean, in accordance with C-C.  Evaporation over the ocean will increase, but may be limited over land due to limitations on soil moisture.  The storm track may be enhanced, which would increase large-scale precipitation events (ARs) along the U.S. west coast.]}
+As described by the Clausius-Clapeyron (C-C) equation, the water vapor content is supposed to increase by $\sim$7$\%$ for each 1$^\circ$C increase in temperature \citep{allan2008atmospheric}. Evaporation over the ocean will increase, but may be limited over land due to limitations on soil moisture \citep{cayan2010future}. However, when the air holds more water vapor, the chances of heavy rain events tend to increase even when even where total precipitation is decreasing \citep{trenberth2011changes}, given that global total precipitation are expected to increase at a lower rate than precipitation extremes \citep{allan2008atmospheric}. According to previous studies (e.g. \citep{allan2008atmospheric, o2009physical, min2011human}), changes in more extreme precipitation follow the C-C relationship more closely than total precipitation precipitation amount \citep{trenberth2003changing}. However, these changes are still remain uncertain with the rate of increase of precipitation extremes affected by multiple factors including the vertical velocity profile and temperature changes \citep{o2009physical}. 
+
+ 
+The precipitation over WUS for moderate or heavy precipitation is mainly resulted from the large-scale water flux transport from the eastern Pacific Ocean rather than directly from evaporation, mainly in the form of atmospheric rivers (ARs) or orographic updraft \citep{trenberth2003changing, neiman2008meteorological}. The storm track may be enhanced, which would increase ARs along the U.S. west coast with increased air water vapor content in future. In the following section, both the mean changes of precipitation and precipitation distributions including non-extreme and extreme events will be investigated projected by the models under a extreme climate forcing context of RCP 8.5.}
 
 \section{Results} \label{sec:Results}
 
@@ -331,28 +341,31 @@ Precipitation has been observed and modeled to being changed regionally and glob
 
 %pr_mean_clm.pdf in the /Users/xingyinghuang/Desktop/data analysis/Extremes_WUS
 
-{\color{red}As a result of enhanced GHG concentrations, mean annual temperature increases by about 1.5 to 2 K from \textsf{hist} to \textsf{mid} and about 4 to 6 K from \textsf{mid} to \textsf{end}. Despite the large spatial variation in climatological temperatures, the temperature change between historical and future is fairly uniform. However, there is a slightly weaker increase in the near-coastal regions during cool season and in the lower latitude area at warm season, which might be due to the increased westerly wind during cool seasons and northward wind during warm season from the near ocean. Larger increases of temperature is also observed in warm season than cool season for about 0.5 K and 1 K for \textsf{mid} and  \textsf{end} respectively.} 
+As a result of enhanced GHG concentrations, mean annual near-surface temperature (T2avg) increases by about 1.5 to 2 K from \textsf{hist} to \textsf{mid} and about 4 to 6 K from \textsf{mid} to \textsf{end}. Despite the large spatial variation in climatological temperatures, the temperature change between historical and future is fairly uniform. However, there is a slightly weaker increase in the near-coastal regions during cool season and in the lower latitude area at warm season, which might be due to the increased westerly wind during cool seasons and northward wind during warm season from the near ocean. Larger increases of temperature is also observed in warm season than cool season for about 0.5 K and 1 K for \textsf{mid} and  \textsf{end} respectively.
 
-{\color{red}As described by the Clausius-Clapeyron (C-C) equation, the water vapor content is supposed to increase by $\sim$7$\%$ for each 1$^\circ$C increase in temperature. With the increase of the temperature in future, water vapor evaporation will increase over the ocean. Practically, whether the increase rate of the water vapor as the temperature goes up will keep the same or not will directly affect the relative humidity. As water vapor reaches saturation, condensation triggers clouds and precipitation. However, when the air holds more water vapor, the chances of heavy rain events tend to increase even when even where total precipitation is decreasing \citep{trenberth2011changes}. To understand the increasing rate of water vapor content under climate warming and whether relative humidity can be remain or not, 2m relative humidity (RH) is plotted in Figure \ref{fig:Figure 4}.} 
+Practically, whether the increase rate of the water vapor as the temperature goes up will keep the same or not will directly affect the relative humidity. As water vapor reaches saturation, condensation triggers clouds and precipitation. To understand the increasing rate of water vapor content under climate warming and whether relative humidity can be remain or not, 2m relative humidity (RH) is plotted in Figure \ref{fig:Figure 4}.
 
-{\color{red}Overall, RH remains almost the same as {\textsf{hist}} over the regions where temperature does not substantially increase. However, in regions where temperature increase is larger than 2 K, RH is instead observed to decrease significantly relative to historical values for about 2$\%$ and 3-6$\%$ compared to \textsf{mid} and \textsf{end} respectively. In fact, trends in RH are spatially consistent with temperature increase but opposite in magnitude with a spatial correlation coefficient of approximately 0.8. This suggests that continental evaporation and water vapor transport is insufficient to compensate for the air vapor capacity when temperature increases to certain level, which is consistent with \cite{joshi2008mechanisms}, and has been observed in results by \cite{rowell2006causes} over continental and southeastern Europe and \cite{simmons2010low} over low-latitude and midlatitude land areas.}
+Overall, RH remains almost the same as {\textsf{hist}} over the regions where temperature does not substantially increase. However, in regions where temperature increase is larger than 2 K, RH is instead observed to decrease significantly relative to historical values for about 2$\%$ and 3-6$\%$ compared to \textsf{mid} and \textsf{end} respectively. In fact, trends in RH are spatially consistent with temperature increase but opposite in magnitude with a spatial correlation coefficient of approximately 0.8. RH still remains the same or increase over part of the near-coastal area over the Pacific Ocean due to the lower increase of T2avg compared to the land area. This suggests that continental evaporation and oceanic water vapor transport are insufficient to compensate for the air vapor capacity when temperature increases to certain level, which is consistent with \cite{joshi2008mechanisms}, and has been observed in results by \cite{rowell2006causes} over continental and southeastern Europe and \cite{simmons2010low} over low-latitude and midlatitude land areas.
 
 %[Motivate how water vapor content is related to precipitation] 
 % spatial correlation with the ocean part, -0.692782, -0.839015, -0.787338, -0.955734; without the ocean part: -0.808621, -0.80644, -0.730088, -0.916312
 % t-test result: cesm_25_wd_wda_r2h_ttest_hist_mid_end.nc; it is computed by using the yearly value of ensemble mean
 
-{\color{red}Based on those background changes of heat and water vapor, from \textsf{hist} to \textsf{mid}, mean precipitation showed a 0.2-0.6 mm/day increase during cool season with a largest change over northwest and less than 0.2 mm/day during warm season over southeast part. From \textsf{hist} to \textsf{end}, the increase is about 0.4-1.2 mm/day during cool season with also a largest change over northwest, and no notable change is observed during warm season. Nonetheless, these results are statistically significant (see Figure \ref{fig:Figure 5}) {\color{red}(how about add significance here)?}. East of the Rockies, precipitation increases through mid-century (statistically significant), but this trend appears to recede towards the end of the century (although these results are not significant). There is also a decrease of about 0.1mm/day in total precipitation over the western flank of the Sierra Nevadas during the cool season from hist to future. This decrease (about 0.15 mm/day) is also found over the Cascades and the western coastal area during warm season from \textsf{hist} to \textsf{mid}. However, this decrease is not statistically significant. Majority of the precipitation over the cool season emerged from large-scale patterns, whereas warm season precipitation was from convection processes.}
 
-{\color{red}The precipitation over WUS for moderate or heavy precipitation is mainly due to the large-scale water flux transport from the eastern Pacific Ocean rather than directly from evaporation, mainly in the form of atmospheric rivers or orographic updraft \citep{trenberth2003changing, neiman2008meteorological}. According to previous studies (e.g. \citep{allen2002constraints, allan2008atmospheric, o2009physical, min2011human}), changes in more extreme precipitation follow the C-C relationship more closely than total precipitation precipitation amount \citep{trenberth2003changing}. In order to find out the precipitation changes in a comprehensive aspect based on our fine-scale simulations, analyses of different precipitation distributions are focused in the following part to account for the future changes of diverse precipitation events.}
+Based on those background changes of heat and water vapor, from \textsf{hist} to \textsf{mid}, mean precipitation showed a 0.2-0.6 mm/day increase during cool season with a largest change over northwest and less than 0.2 mm/day during warm season over southeast part. From \textsf{hist} to \textsf{end}, the increase is about 0.4-1.2 mm/day during cool season with also a largest change over northwest, and no notable change is observed during warm season. Nonetheless, these results are statistically significant (see Figure \ref{fig:Figure 5}). East of the Rockies, precipitation increases through mid-century (statistically significant), but this trend appears to recede towards the end of the century (although these results are not significant). There is also a decrease of about 0.1mm/day in total precipitation over the western flank of the Sierra Nevadas during the cool season from hist to future. This decrease (about 0.15 mm/day) is also found over the Cascades and the western coastal area during warm season from \textsf{hist} to \textsf{mid}. However, this decrease is not statistically significant. Majority of the precipitation over the cool season emerged from large-scale patterns, whereas warm season precipitation was from convection processes.
+
+The precipitation over WUS for moderate or heavy precipitation is mainly due to the large-scale water flux transport from the eastern Pacific Ocean rather than directly from evaporation, mainly in the form of atmospheric rivers or orographic updraft \citep{trenberth2003changing, neiman2008meteorological}. According to previous studies (e.g. \citep{allen2002constraints, allan2008atmospheric, o2009physical, min2011human}), changes in more extreme precipitation follow the C-C relationship more closely than total precipitation precipitation amount \citep{trenberth2003changing}. In order to find out the precipitation changes in a comprehensive aspect based on our fine-scale simulations, analyses of different precipitation distributions are focused in the following part to account for the future changes of diverse precipitation events.
+
 
 {\color{red}Key questions that need to be answered here:
 \begin{itemize}
 \item Why does mean wet season precipitation increase over the northwest?  Answer:  Increased orographic precipitation due to increased IVT.  IVT increases due to larger specific humidity from increased ocean evaporation, which is affected primarily by climatological forcing (?)
 \item Why does precipitation stay the same over Southern California?  Answer:  No substantial predicted increase in IVT over E. Pac near Southern California coast.  IVT in this region is driven primarily by variations in ENSO.
-\item Why does precipitation stay the same over the Intermountain West?
+\item Why does precipitation stay the same over the Intermountain West? (Since precipitation over the Intermountain West during warm season is mainly results from the convection processes, the precipitation is directly related with the changes of the relative humidity. As shown in Figure \ref{fig:Figure 4}, RH has decreased over most the study area except over where the soil moisture is relatively low. The changes of RH are related with the soil moisture magnitude accompanying the changes of latent heat flux during warm season.)
 \end{itemize}
 }
 
+%Huang: check the CAPE here. Hist did not has CAPE output.  see pr_mean_clm.pdf at the Extremes_WUS file folder. soil moisture and sources_four seasons.pdf over the changes ; discussion_v2.pdf 
 
 %the moisture supply for moderate or heavy precipitation locally does not come directly from evaporation. Instead it has to come from transport, and thus from convergence of low-level moisture elsewhere in the atmosphere. \citep{trenberth2003changing}
 
@@ -379,8 +392,10 @@ Precipitation has been observed and modeled to being changed regionally and glob
 
 
 %(RH shows some interesting results when average over the rainy days of each range, with increase during Mid century (this is different from the average changes over all days) but decrease during End century, which might suggest that when temperature increase high enough, the water vapor is not enough to support the corresponding changes of relative humidity.  This can be further explained by the Q2m and T2avg.) 
-%see wd\_RH\_Mid-Hist\_End-Mid\_R5mm to Rxmm.pdf, wd_T2avg_Mid-Hist_End-Mid_R5mm to Rxmm.pdf, wd_Q2m_Mid-Hist_End-Mid_R5mm to Rxmm.pdf and wd_Q850_Mid-Hist_End-Mid_R5mm to Rxmm.pdf at the desktop. The latent heat flux is quite related with the result of the changes of low level relative humidity
-
+%see wd\_RH\_Mid-Hist\_End-Mid\_R5mm to Rxmm.pdf, wd_T2avg_Mid-Hist_End-Mid_R5mm to Rxmm.pdf, wd_Q2m_Mid-Hist_End-Mid_R5mm to Rxmm.pdf and wd_Q850_Mid-Hist_End-Mid_R5mm to Rxmm.pdf at the desktop. 
+%****The latent heat flux is quite related with the result of the changes of low level relative humidity
+%Qle: total evaporation W/m^2 (no output for Hist, Mid 2 3 4 End 1 3); QSOIL: Ground evaporation mm/s (no output for Hist), SOILLIQ and H2OSOI: soil moisture (no output for Hist, Mid 2 3 4  End 1 3, done), LHFLX: Surface latent heat flux W/m^2 (done) have a look of these variables; 
+%****the soil moisture did not change, though with some increase when pr increases and decreases when pr decreases, similar for latent flux; 
 
 %(About the dryness of the surface/underground and relative humidity)
 %"The key factor causing drying is that land surfaces (and the air just above them) warm, on average, about 50$\%$ more than ocean surfaces \citep{joshi2008mechanisms}" "The second factor ensuring drying is that water vapor content over land does not increase fast enough relative to the rapid warming there." "Because the land warms faster than the oceans, however, the humidity of the arriving air does not increase enough to maintain a constant relative humidity. The latter must therefore fall on average (see the figure), as indeed seen in model simulations \citep{rowell2006causes} and observed on all continents \citep{simmons2010low}." "In a warmer climate, more rain is needed. Many regions will get more rain, but it appears that few will get enough to keep pace with the growing evaporative demand."
@@ -404,21 +419,23 @@ Precipitation has been observed and modeled to being changed regionally and glob
 
 \subsection{Precipitation indices}
 
-We now turn our attention to the precipitation indices presented in Table \ref{tab:table1}.  For each index, the changes of precipitation character for each period, averaged over all ensemble members are plotted in Figure \ref{fig:Figure 5} (for the indices that quantify precipitation days) and Figure \ref{fig:Figure 6} (for the indices describing precipitation amounts). Although  mean precipitation shows a weak but overall increasing trend from \textsf{hist} to \textsf{mid} and \textsf{mid} to \textsf{end}, the precipitation indices exhibit substantially more unique character.
+In order to find out the precipitation changes in a comprehensive aspect based on our fine-scale simulations, analyses of different precipitation distributions are focused in this part to account for the future changes of diverse precipitation events. The precipitation indices are presented in Table \ref{tab:table1}.  For each index, the changes of precipitation character for each period, averaged over all ensemble members are plotted in Figure \ref{fig:Figure 5} (for the indices that quantify precipitation days) and Figure \ref{fig:Figure 6} (for the indices describing precipitation amounts). Although  mean precipitation shows a weak but overall increasing trend from \textsf{hist} to \textsf{mid} and \textsf{mid} to \textsf{end} (about 10-15$\%$), the precipitation indices exhibit substantially more unique character.
 
-When comparing \textsf{hist} to \textsf{mid}, the total rainy days and frequency of non-extreme precipitation have significantly increased mainly over the central-east and southeast part of WUS, which is not observed between \textsf{mid} and \textsf{end}. On the contrary, the total rainy days and frequency of non-extreme precipitation have decreased significantly over the northwest region and the eastern part of the Montana, Wyoming and Oregon from \textsf{mid} to \textsf{end}. These changes are the primary driver for the observed change to mean precipitation exhibited in Figure \ref{fig:Figure 4}. 
+When comparing \textsf{hist} to \textsf{mid}, the total rainy days and frequency of non-extreme precipitation have significantly increased (about 10-15$\%$) mainly over the central-east and southeast part of WUS, which is less obvious between \textsf{mid} and \textsf{end}. On the contrary, the frequency of non-extreme precipitation have decreased significantly over the northwest region and the eastern part of the Montana, Wyoming and Oregon from \textsf{mid} to \textsf{end} (about 10$\%$). These changes are the primary driver for the observed change to mean precipitation exhibited in Figure \ref{fig:Figure 4}.
 
 %The combined changes of those is displayed when comparing Hist and End.
 
-As for extreme precipitation frequency (i.e. days with daily Pr between 10 mm and 40 mm), the number of days increases from \textsf{hist} to \textsf{mid}, but the pattern is scattered over northwest and central WUS. When comparing \textsf{mid} to \textsf{end}, there is a clear and significant increase in extreme precipitation events over the northwest coastal area and eastern flank of the Cascades. This result is consistent with \cite{dominguez2012changes}, who observe a robust increase in winter precipitation extremes toward the latter half of the 21st century {\color{red}using RCMs [an ensemble of RCMs?]}.
+As for extreme precipitation frequency (i.e. days with daily Pr between 10 mm and 40 mm), the number of days increases from \textsf{hist} to \textsf{mid}, but the pattern is scattered over northwest and central WUS. When comparing \textsf{mid} to \textsf{end}, there is a clear and significant increase in extreme precipitation events over the northwest coastal area (about 20-30$\%$) and eastern flank of the Cascades (larger than 40$\%$). This result is consistent with \cite{dominguez2012changes}, who observe a robust increase in winter precipitation extremes toward the latter half of the 21st century by an ensemble of RCMs. There is a slight, but insignificant decrease over the Cascades and the Sierra Nevada (significance is low due to the high variability of precipitation). No notable predicted changes have been observed over California.
 
-There is a slight, but insignificant decrease over the Cascades and the Sierra Nevada (significance is low due to the high variability of precipitation){\color{red}[Huang: ?]}. For very extreme precipitation (Pr$>=$40 mm) events, there is an increasing trend over the northwest coast and the Cascades and its eastern flank. The corresponding changes in rain amount are consistent with the changes of frequency (see Figure \ref{fig:Figure 6}). Overall, these results indicate more extreme precipitation over the northwest U.S.
+The associated precipitation signal under a warmer climate is more ambiguous for California \citep{neelin2013california} considering the extreme variability on interannual time scales \citep{dettinger2011climate}. \cite{kim2005projection} found that under global warming, heavy precipitation events show largest increases in the mountainous regions of the northern California Coastal Range and the Sierra Nevada. However, our results show a minor decrease (though not statistically significant) of extreme precipitation over the Sierra Nevada. The decrease over southwest U.S. is mainly due to the intensified La Ni\~na in the future as shown in the Section \ref{sec:IsolatingENSO}. 
 
-({\color{red} might add the specific percentages for further illustrations})
 
-%****According to previous studies (e.g. \citep{allen2002constraints, allan2008atmospheric, o2009physical, min2011human}), changes in more extreme precipitation follow the Clausius-Clapeyron relationship, i.e. the atmospheric water vapor content increases at an approximate rate of 7.5$\%$ per kelvin of atmospheric temperature, more closely than total precipitation precipitation amount \citep{trenberth2003changing}. Based on CMIP3 simulation, \cite{kharin2007changes} argued that there will be an increase of annual one day maximum precipitation (Max1d) for about 6$\%$ with each kelvin of global warming, with ranging of 4$\%$-10$\%$ K with the models.
+%***check the wd_index_annual_Elnino_Lanina.pdf for the difference at both warm phase and cool phase of ENSO. What if only focus on the same phase? Answer: The signal is still similar to what we got here based on all of the years.
+%check the inter-annual variation of Pr to see why the changes are not sig: out of expectation, the inter-annual variability actually is not particularly high over dry region of southwest. check the wd_index_std_hist_mid_end.pdf 
 
-{\color{red}[Why does Fig. 8 appear before Fig. 7?]} In order to understand the drivers behind the observed changes, we first examine change in moisture flux for cool seasons when WUS precipitation is primarily from water vapor influx from the Pacific Ocean (see Figure \ref{fig:Figure 8}). Examining the moisture flux at 850 hPa, {\color{red}we observe an increase in specific humidity that accompanies the increase of the temperature in future [where is this observed?  not in Fig. 8]}. However, when comparing to \textsf{hist}, wind patterns in \textsf{mid} and \textsf{end} are also reduced {\color{red}over the eastern part of the WUS and enhanced to the west [where?  I don't see it]}.  {\color{red}[These previous several sentences require some clarification as I don't see what you are referring to]}  Integrated vapor transport (IVT) (Figure \ref{fig:Figure 8}) for extreme precipitation days over cool seasons. Generally, IVT is useful to understand extreme precipitation events that arise from atmospheric rivers over the northwestern U.S. and from orographic uplift (especially for very extreme precipitation) \citep{ralph2004satellite, leung2009atmospheric, dettinger2011climate}. Based on the observed change in IVT, it is clear that the increase in moisture influx from past to future, which is mainly due to the change of the air water vapor content with increased temperature, corresponds to the changes of precipitation extremes shown in Figure \ref{fig:Figure 5}.
+For very extreme precipitation (Pr$>=$40 mm) events, there is an increasing trend over the northwest coast (larger than 60$\%$) and the Cascades (about 50$\%$) and its eastern flank (larger than 60$\%$) when comparing \textsf{hist} to \textsf{end}. Significant changes have also observed over the northern mountainous part of California for about 20-40$\%$ from \textsf{hist} to \textsf{end}. The corresponding changes in rain amount are consistent with the changes of frequency (see Figure \ref{fig:Figure 6}). Overall, these results indicate more extreme precipitation over the northwest U.S with precipitation extreme follows more consistent with C-C relationship.
+
+In order to understand the drivers behind the observed changes, we first examine change in moisture flux for cool seasons when WUS precipitation is primarily from water vapor influx from the Pacific Ocean (see Figure \ref{fig:Figure 7}). We observe an increase in specific humidity at 850 hPa that accompanies the increase of the temperature in future. However, when comparing to \textsf{hist}, wind patterns in \textsf{mid} and \textsf{end} are also reduced {\color{red}over the eastern part of the WUS and enhanced to the west [where?  I don't see it]}. Integrated vapor transport (IVT) (Figure \ref{fig:Figure 7}) for extreme precipitation days over cool seasons. Generally, IVT is useful to understand extreme precipitation events that arise from atmospheric rivers over the northwestern U.S. and from orographic uplift (especially for very extreme precipitation) \citep{ralph2004satellite, leung2009atmospheric, dettinger2011climate}. Based on the observed change in IVT, it is clear that the increase in moisture influx from past to future, which is mainly due to the change of the air water vapor content with increased temperature, corresponds to the changes of precipitation extremes shown in Figure \ref{fig:Figure 5}.
 
 %neiman2008meteorological
 
@@ -428,52 +445,102 @@ There is a slight, but insignificant decrease over the Cascades and the Sierra N
 
 %{\color{red}[Motivating question:  Can changes in mean precipitation be used to predict changes in extreme precipitation?]}
 
-To see if changes in mean precipitation can be used to predict changes in extreme precipitation features, the correlations between Pr and specific quantiles have been calculated. Here, selected quantiles including the values at 70$\%$ (70p), 80$\%$ (80p), 90$\%$ (90p), 95$\%$ (95p) and 99$\%$ (99p) are applied based on the all the daily precipitation data at each grid point within each time period. These quantiles are chosen in order to account for the changes of both moderation and extreme precipitation. The mean Pr and those quantiles for \textsf{hist}, and the differences of these quantities among different time periods can be found in the supplemental figure. Within expectation, regions with higher Pr are attributed with larger values of those quantiles, i.e. stronger precipitation extremes.
+To see if changes in mean precipitation can be used to predict changes in extreme precipitation features, the correlations between Pr and specific quantiles have been calculated. Here, selected quantiles including the values at 70$\%$ (70p), 80$\%$ (80p), 90$\%$ (90p), 95$\%$ (95p) and 99$\%$ (99p) are applied based on the all the daily precipitation data at each grid point within each time period. These quantiles are chosen in order to account for the changes of both moderation and extreme precipitation. The mean Pr and those quantiles for \textsf{hist}, and the differences of these quantities among different time periods can be found in the supplemental figure. Within expectation, regions with higher Pr are attributed with larger values of those quantiles, i.e. stronger precipitation extremes. This is further proved by the high correlation (about 0.7-0.9) between Pr and R20mm, R40mm, and Rxmm, not between Pr and non-extreme precipitation events.
 
 %The spatial correlations between the changes of Pr and the changes of the designed quantiles in future can be found in Table \ref{tab:table2}. 
 
-Spatial correlation is assessed by computing Pearson product-moment coefficient of linear correlation between relevant variables. It is found that the absolute changes of Pr in future are positively related with the absolute changes of the quantiles. This relationship is at a moderate level between \textsf{mid} and \textsf{hist} (larger than 0.65), and becomes stronger when going to the \textsf{end} period (reaching $\sim$0.96). Consistently, the mean Pr itself is also positively correlated with the absolute changes of the quantiles in future (around 0.5 to 0.78), except 70p between \textsf{end} and \textsf{mid} and 99p \textsf{mid} and \textsf{hist}. 
+Spatial correlation is assessed by computing Pearson product-moment coefficient of linear correlation between relevant variables. It is found that the absolute changes of Pr in future are positively related with the absolute changes of the quantiles. This relationship is at a moderate level between \textsf{mid} and \textsf{hist} (larger than 0.65), and becomes stronger when going to the \textsf{end} period (reaching $\sim$0.96). Consistently, the mean Pr itself is also positively correlated with the absolute changes of the quantiles in future (around 0.5 to 0.78), except 70p between \textsf{end} and \textsf{mid} and 99p \textsf{mid} and \textsf{hist}.
 
-The relative changes of quantiles are also related with the relative changes of Pr with correlations around 0.65 to 0.85, except 70p and 80p between \textsf{end} and \textsf{mid}. So, the area featured with higher increase of extreme precipitations in future also tends to have larger increase of its mean precipitation. However, the wetter area does not necessary have more intense changes of moderate and extreme precipitation than drier area.
+The relative changes of quantiles are also related with the relative changes of Pr with correlations around 0.65 to 0.85, except 70p and 80p between \textsf{end} and \textsf{mid}. So, the area featured with higher increase of extreme precipitations in future also tends to have larger increase of its mean precipitation. However, the wetter area does not necessary have more intense changes of moderate and extreme precipitation than drier area. 
 
-{\color{red}might remove 70p}
+However, no notable consistent correlation is found between the changes of Pr and the changes of precipitation indices, further stating that mean precipitation and precipitation events undergo different features as for the changes in the future.
+
+%{\color{red}might remove 70p, check the spatial correlation of Pr and the other indices. 
+
+{\color{red}{might divide into four regions; PDF of each region?}}
+
 
 %However, it seems that wetter area tends to have more intense changes of moderate precipitation including 70p, 80p and 90p in future than drier area at a moderate level (around 0.6). However, for the relatively very extreme precipitation around 95p, the relationship is opposite, i.e. wetter area tends to have less intense changes of very extreme precipitation in future than drier area also at a moderate level (around 0.6).
 
 %also, from the P99, we can see that the area with less precipitation may expect more intense changes of extremes in futures. This might related with the larger capacity for the water vapor content for relatively dry area as temperatures increase similarly over all area
 
-\subsubsection{Isolating differences due to climate change and ENSO}
+\subsubsection{Isolating differences due to climate change and ENSO} \label{sec:IsolatingENSO}
 
-{\color{red}[Motivate]} The phase of ENSO is well known to have important repercussions on precipitation extremes {\color{red}[citation needed]}. ENSO from past to future, the difference of precipitation behaviors between the warm phase (i.e. El Ni\~no) and cool phase (i.e. La Ni\~na) of ENSO is illustrated in Figure \ref{fig:Figure 7} for the wet seasons of each time period. Based on the ONI index values, the mean SST anomalies are 1.38, 1.71 and 2.30 K during El Ni\~no years, and -1.16, -1.62 and -1.43 K during La Ni\~na years for \textsf{hist}, \textsf{mid} and \textsf{end} respectively {\color{red}[some references are needed to place this behavior of ENSO within the context of the literature -- are these values reasonable?]}. The SST anomalies of {\color{red}each year or each month [or?]}, and their associated spatial pattern when averaged during the warm and cool phases can be found in the supplement ({\color{red}might adding some descriptions of these}). {\color{red}[Also include mean SSTs during each period]}
+%{\color{red}[Motivate]} 
+
+The phase of ENSO is well known to have important repercussions on precipitation extremes \citep{larkin2005definition, allan2008atmospheric, maloney2014north, yoon2015increasing}. \cite{cai2014increasing} found a significantly increase for extraordinary precipitation along the eastern Pacific Ocean in the 21st century within the CMIP5 ensemble, associated with increasing frequency of extreme El Ni\~no events due to greenhouse warming. In this part, we will figure out how the ENSO impacts specific regions over our study area, and whether the effects pattern will change over time.
+
+{\color{red} (Huang: \cite{yoon2015increasing} found a strengthened relation with ENSO for the projected increase in water cycle extremes in California using the output from CESM1 and CMIP5. Similarly by \cite{maloney2014north} using CMIP5 dataset. (check the CESM1?))}
+
+%\cite{cai2014increasing} also found that there is associated with extraordinary precipitation along the eastern Pacific Ocean, are projected to significantly increase in the twenty-first century within the CMIP5 ensemble with increasing frequency of extreme El Niño events due to greenhouse warming
+
+
+%The impact of ENSO on precipitation is emphasized in our study due to its impact in regulating the precipitation over a majority of our study area, particularly in the southwest U.S. \citep{cayan1999enso, zhang2010influence, deser2012communication}.
+
+%For instance, ‘‘extreme El Niño events,’’ associated with extraordinary precipitation along the eastern Pacific Ocean, are projected to significantly increase in the twenty-first century within the CMIP5 ensemble (Cai et al. 2014). More specific to the regional focus of this study, Seager et al. (2012) showed that ENSO-driven precipitation minus evaporation anomalies significantly increases over Northern California during the twenty-first century. Maloney et al. (2014) also found a strengthening of California precipitation patterns associated with ENSO in their analysis of CMIP5 GCMs under RCP8.5."
+
+
+%\cite{yoon2015increasing} found that the projected increase in water cycle extremes including intense drought and excessive flooding in California is associated with a strengthened relation to ENSO not only through its warm and cold phases but also its precursor patterns. The ENSO might shift in future under the changes in Northern Hemispheric low-frequency circulation and thermodynamic patterns \citep{berg2015increased}. 
+
+%%%%
+
+ENSO from past to future, the difference of precipitation behaviors between the warm phase (i.e. El Ni\~no) and cool phase (i.e. La Ni\~na) of ENSO is illustrated in Figure \ref{fig:Figure 8} for the wet seasons of each time period. Based on the ONI index values, the mean SST anomalies are 1.38, 1.71 and 2.30 K during El Ni\~no years, and -1.16, -1.62 and -1.43 K during La Ni\~na years for \textsf{hist}, \textsf{mid} and \textsf{end} respectively. The mean SSTs over the Ni\~no 3.4 region where the are 26.83, 28.62 and 30.54$^\circ$C for textsf{hist}, \textsf{mid} and \textsf{end} respectively. Based on the SST datasets we used here, the anomaly of ENSO has intensified. The SST anomalies of each year and each month, and their associated spatial pattern when averaged during the warm and cool phases can be found in the supplement, exhibiting the increasing frequency of El Ni\~no during for \textsf{mid} and almost doubled frequency of La Ni\~na during \textsf{mid} and \textsf{end} compared to the \textsf{hist}. 
+
+%***{\color{red}(Will this be the reason that causing increasing trend over northwest and no notable changes over most of the California regions? Might need to check for the same phase.) [Huang: It seems not. The increasing trend is notable in both phases averagely. The no notable changes have been discussed at the Precipitation indices part. Actually, since summing all the anomaly, the value will still be the average SST at each phase, that's basically what anomalies mean. Therefore, the results showed in the precipitation indices section should still be mainly regulated by the effect of climate forcing, i.e. the increase of mean SST and GHGs. Therefore, the changes of frequency of ENSO will mainly help explaining the possible changes of variability in the future based on the mean precipitation features. The ENSO effects here mainly explain the difference within each time period rather than the difference among different time periods. However, the precipitation extremes are still related with the frequency of the ENSO.]}
+
+{\color{red}(Huang: As SSTs increase in the future, is not it normal for the anomaly of ENSO to be increased to compensate the changes of water vapor capacity? Might email Neale about this.)}
 
 %			Hist                Mid            		End
 %La Ni\~na 		6, -1.163667  11, -1.616909  	11, -1.430182
 %El Ni\~no		8, 1.38   10, 1.7149    	6,   2.297667
 
-{\color{red}[Fig. 7 shows a pronounced impact of ENSO through Northern California that seems uncharacteristic of what I know about ENSO from the literature.  I had thought ENSO primarily impacts Southern California.  Discuss briefly?]}
+During the El Ni\~no phase, intensified mean precipitation is expected over the southwest \citep{hamlet2007effects}, along with reduced precipitation intensity over the northwest. In La Ni\~na phase, the pattern is essentially reversed, with wetter conditions in the northwest and a drier situation in the Southwest. This feature is characterized as a northwest/southwest precipitation dipole, triggered by ENSO's modification of the storm track \citep{gershunov1998interdecadal, leung2003hydroclimate}, along with modulation of the enhanced precipitation variability \citep{cayan1999enso, kahya1994influences}. This dipole is also apparently in the frequency of rainy days and extreme precipitation events. 
 
-During the El Ni\~no phase, intensified mean precipitation is expected over the southwest \citep{hamlet2007effects}, along with reduced precipitation intensity over the northwest. This feature is characterized as a northwest/southwest precipitation dipole, triggered by ENSO's modification of the storm track \citep{gershunov1998interdecadal, leung2003hydroclimate}, {\color{red}along with [?]} modulation of the enhanced precipitation variability in the southern WUS \citep{cayan1999enso, kahya1994influences}. This dipole is also apparently in the frequency of rainy days and extreme precipitation events. In \textsf{mid} and \textsf{hist}, ENSO is observed to intensify, which appears to be related with the changes of the strength of El Ni\~no and La Ni\~na {\color{red}[Since ENSO behavior is strongly dependent on choice of climate model, you need to put this behavior in context and explain how a weakening ENSO could potentially impact these precipitation projections, which should emerge from the linear model result]}. This can be explained by the SST anomaly magnitude (detrended) of warm and cold phases (see the supplement). \cite{deflorio2013western} also found a statistically significant linkages with ENSO and PDO for both the overall and extreme intensity of wintertime precipitation over the WUS using CCSM4 (earlier form of CESM). Strengthening storm patterns associated with ENSO are also found by \cite{maloney2014north} over California using CMIP5 output under RCP8.5. 
-
-{\color{red}[Do you want to discuss your observation of only a weak influence from PDO?]}
-
-{\color{red}[You should show the results of climatological change with changes due to ENSO removed]}
-
-%***\cite{yoon2015increasing} found that the projected increase in water cycle extremes including intense drought and excessive flooding in California is associated with a strengthened relation to ENSO not only through its warm and cold phases but also its precursor patterns. The ENSO might shift in future under the changes in Northern Hemispheric low-frequency circulation and thermodynamic patterns \citep{berg2015increased}. 
+In \textsf{mid} and \textsf{hist}, ENSO is observed to intensify, which appears to be related with the changes of the strength of El Ni\~no and La Ni\~na. This can be explained by the SST anomaly magnitude (detrended) of warm and cold phases (see the supplement). \cite{deflorio2013western} also found a statistically significant linkages with ENSO and PDO for both the overall and extreme intensity of wintertime precipitation over the WUS using CCSM4 (earlier form of CESM). Strengthening storm patterns associated with ENSO are also found by \cite{maloney2014north} over California using CMIP5 output under RCP8.5. 
 
 
-({\color{red}For Figure 7, might add percentage of changes})
+%{\color{red}[Fig. 7 shows a pronounced impact of ENSO through Northern California that seems uncharacteristic of what I know about ENSO from the literature.  I had thought ENSO primarily impacts Southern California. Discuss briefly?]}
+
+We have also checked the teleconnection effect of Pacific Decadal Oscillation (PDO) and it did not show strong effect alone. Precipitation features did not change notably when at the cool phase or warm phase of PDO during \textsf{hist}. However, together with ENSO at the same phase, PDO can have notable effect over northwest. This coupled effect has been found by previous studies \cite{gershunov1998interdecadal}, stating ENSO and PDO can "reinforce" each other with PDO responding to the same internal atmospheric variability as ENSO \citep{pierce2002role}. In our simulations, the patterns of PDO index diverse a lot from past to future, and we suppose that 26 years are not long enough to account for the variability of PDO due to its duration for decades. In this study, the PDO is not analyzed as its decadal duration making it difficult to capture within the 26 years simulation time period.
+
+%{\color{red}[Do you want to discuss your observation of only a weak influence from PDO?]}
+
+%In this study, the North Pacific Oscillation (NPO) is not analyzed as its decadal duration making it difficult to capture within the 26 years simulation time period. Further, as argued by \cite{pierce2002role}, the NPO does not {\color{red}[Huang: does not?]}respond to the same internal atmospheric variability as ENSO, and so no significant {\color{red}improvement [improvement in what?]} can be obtained to account for the ENSO's effects by incorporating accurate predictions of NPO SSTs. {\color{red} (put this to the ENSO part?)}
+
+%***"There is also evidence that ENSO and PDO can ‘‘reinforce’’ each other; that is, when ENSO and PDO are ‘‘in phase’’ (i.e., both in warm phase or both in cool phase), the effects on cool season precipitation are enhanced, whereas when they are ‘‘out of phase,’’ the effects are diminished [Gershunov and Barnett, 1998]."
+
+%***"\citep{hamlet2007effects} "Climate variations associated with Pacific Decadal Oscillation (PDO) and El Nin˜o Southern Oscillation (ENSO) also have strong effects on flood risks. In contrast to the effects associated with 20th century warming, the climate variability signal is characterized by regional scale patterns related to the geographic distribution of cool season precipitation also identified in many previous studies. In general, the largest changes in simulated flood risks are associated with years when PDO and ENSO are ‘‘in phase,’’ particularly in the southwest.""
+
+%***cesm_25_wd_index_ttest_wilcoxtest_within_pdo_hist.nc shows that PDO cool phase vs warm phase during hist did not affect Pr event features. And the PDO index (after run average) features are not consistent from Hist to Mid to End. So, we will not work on this.
+
+%***PDO did not show strong effect alone, but with ENSO at the same phase, it shows notable effect with more effects over northwest. However, the southwest has less rain extremes. need to has longer period to see this effect (use UW and PRISM), also check the http://www.atmos.washington.edu/~mantua/REPORTS/PDO/PDO_cs.htm. But coupled effect did not show notably for cool phase of ENSO, but has effect for cool phase of PDO. see wdevent_ENSO&PDO-ENSO.pdf and wdevent_ENSO&PDO-PDO_coolphase.pdf. 
+
+%({\color{red}For Figure 8, might add percentage of changes}) The percentage is really high, might not be necessary to mention it here
 
 %explain why SDII and R5mm are not plotted.
 
 
-The impact of ENSO is further observed by the IVT difference over rainy days between El Ni\~no and La Ni\~na (see Figure \ref{fig:Figure 8}) accompanying by the wind pattern difference at 850 hPa, showing the increase of the moisture flux for the southwest and decrease for the northwest. However, the impact of ENSO for observational precipitation has a weaker signal of the dipole effect compared to the VR-CESM (see the supplement), which might suggest that the model has a overestimation of ENSO's impact on precipitation, especially over the northwest U.S. The improvement of ENSO in the model is directly proportional to the representation of ENSO forced precipitation anomalies \citep{achutarao2006enso}.
+The impact of ENSO is further observed by the IVT difference over rainy days between El Ni\~no and La Ni\~na (see Figure \ref{fig:Figure 9}) accompanying by the wind pattern difference at 850 hPa, showing the increase of the moisture flux for the southwest and decrease for the northwest. This suggests the major role of moisture influx regulation of ENSO.
 
-Based on the above results, it can be seen that the magnitude of the effects of ENSO is comparable or even higher than the impacts of climate forcing. For further investigation, linear regression is applied to signaling the factor effects due to ENSO and climate forcing. First, we get the SST anomaly of each year at each grid point over our study area followed by the way of Ni\~no 3.4 to be the ENSO factor values. Then, we use the GHGs values at each year to represent the climate forcing factor. The features of the precipitation indices as we defined above are used as response variables. Combined the values of all the time period and all the runs, we got the significance of these two factors' effects at each grid point based on the ANOVA (analysis of variance) output. (see the supplement) ({\color{red}This is not complete yet, but not sure whether to add this or not}).
 
-{\color{red} add the correlation of the quantiles result here}
+Based on the above results, it can be seen that the magnitude of the effects of ENSO is comparable or even higher than the impacts of climate forcing. For further investigation, linear regression is applied to signaling the factor effects due to ENSO and climate forcing. First, we get the SST anomaly of each cool season when ENSO mainly affect followed by the way of Ni\~no 3.4 to be the ENSO factor values. Then, we use the GHGs values at each year to represent the climate forcing factor. The features of the precipitation indices as we defined above are used as response variables. Combined the values of all the time period and all the runs, we got the significance of these two factors' effects at each grid point based on the ANOVA (analysis of variance) output (see the supplement). It seems that changing of the SSTs anomaly can affect most of the study area for non-extreme precipitation events, and southern regions and the Cascades and the Rocky Mountains for precipitation extremes. The GHGs factor mainly shows significant impacts over the northwest and inter-mountainous regions for both non-extreme and extreme precipitation events. 
 
-%******(Effect of ENSO using different indices)
-%************\citep{larkin2005definition} "Figure 3. Regions in which the frequency of occurrence of extreme (upper quintile) seasonal anomalies during El Nino conditions is statistically significant" (similar to our results)
+We have also examined the linear coefficients of these two factors over where  their effects are significant to see the strength that ENSO and GHGs play at each grid point (see the supplement). It turns out that the effect of the ENSO is similar to the pattern of the difference between El Ni\~no and La Ni\~na (see Figure \ref{fig:Figure 9}). In contrast, the effect of the GHGs is close to the pattern of the difference between the different time periods (see Figure \ref{fig:Figure 5}). We do acknowledge that the values might not be accurate due to the simple linear mode we used here. However, the qualitative conclusions won't change. Therefore, we assume that even the ENSO largely regulates the precipitation over different phases, it won't affect our results shown here for the changes of precipitation features from past to future. Although here is just one of the possible cases of ENSO scenarios in the future, as ENSO behavior is strongly dependent on choice of climate models, the underlying principles should still be consistent.
+
+%wd_lmfit_coef_enso_ghg.pdf
+
+%{\color{red}(to be completed; quantify the results of precipitation change with changes due to ENSO and climate changes (like positive or negative and larger or smaller)
+
+%[Paul: Since ENSO behavior is strongly dependent on choice of climate model, you need to put this behavior in context and explain how a weakening ENSO could potentially impact these precipitation projections, which should emerge from the linear model result].)}
+
+
+Although, the strength of ENSO intensifies in the future with CESM, there is still substantial uncertainty regarding how El Ni\~no will change under global warming as debated by plenty of studies \citep{fedorov2000nino, guilyardi2009understanding}, particularly as ENSO appears to be relatively insensitive to a doubling of CO$_2$ in most models \citep{dinezio2012mean}. Correctly simulation changes to the spatial pattern of SSTs ion state-of-the-art coupled GCMs remains challenging \cite{joseph2006enso, jha2014sst, taschetto2014cold}. \cite{capotondi2013enso} showed that the diversity of El Ni\~no characteristics in CCSM4 is comparable to what was found in observations, although, as found by \cite{deser2012enso}, the overall magnitude of ENSO in CCSM4 is overestimated by ~30$\%$ over the preindustrial time period.
+
+
+%****\cite{stevenson2012will} assessed ENSO in CCSM4 (predating CESM) and observed no signal when comparing the twentieth and twenty-first-century ensembles, as also argued by \cite{philip2006shifts}. It is believed that large ensembles are needed to isolate a significant climate change response within ENSO, {\color{red}and inter-model teleconnection differences \citep{stevenson2012significant} [?]}. {\color{red}(put this into the ENSO part?)} There is still no clear agreement among coupled models whether ENSO will weaken or strengthen in response to increased greenhouse gas concentrations, 
+
+%(Effect of ENSO using different indices)
+%citep{larkin2005definition} "Figure 3. Regions in which the frequency of occurrence of extreme (upper quintile) seasonal anomalies during El Nino conditions is statistically significant" (similar to our results)
 
 %Mathematically, the regression relationship can be written as, (add equation and explain it here).
 
@@ -567,17 +634,11 @@ Based on the above results, it can be seen that the magnitude of the effects of 
 
 \section{Discussion and Summary} \label{sec:Summary}
 
-In this study, the North Pacific Oscillation (NPO) is not analyzed as its decadal duration making it difficult to capture within the 26 years simulation time period. Further, as argued by \cite{pierce2002role}, the NPO does not {\color{red}[Huang: does not?]}respond to the same internal atmospheric variability as ENSO, and so no significant {\color{red}improvement [improvement in what?]} can be obtained to account for the ENSO's effects by incorporating accurate predictions of NPO SSTs. 
-
-The associated precipitation signal under a warmer climate is more ambiguous for California \citep{neelin2013california} considering the extreme variability on interannual time scales \citep{dettinger2011climate}. \cite{kim2005projection} found that under global warming, heavy precipitation events show largest increases in the mountainous regions of the northern California Coastal Range and the Sierra Nevada. However, our results show a minor decrease (though not statistically significant) of extreme precipitation over the Sierra Nevada. 
-
 %***the overestimation of pr over west side of Sierra Nevada issue
 
 %*****As suggested by \cite{hamlet2007effects}, global warming has played a relatively minor role in determining cool season precipitation trends over historic period with an obvious change in the interannual variability across the West.
 
-%In our study, the signal of global warming in regulating the behaviors of precipitation is also not as obvious as the impact of large scale variability (i.e. ENSO). 
-
-Although, the strength of ENSO intensifies in the future with CESM, there is still substantial uncertainty regarding how El Ni\~no will {\color{red}change under global warming by altering the background climate or not as debated by plenty of studies \citep{fedorov2000nino, guilyardi2009understanding} [??]}. There is still no clear agreement among coupled models whether ENSO will weaken or strengthen in response to increased greenhouse gas concentrations, particularly as ENSO appears to be relatively insensitive to a doubling of CO$_2$ in most models \citep{dinezio2012mean}. However, correctly simulation changes to the spatial pattern of SSTs ion state-of-the-art coupled GCMs remains challenging \cite{joseph2006enso, jha2014sst, taschetto2014cold}. \cite{capotondi2013enso} showed that the diversity of El Ni\~no characteristics in CCSM4 is comparable to what was found in observations, although, as found by \cite{deser2012enso}, the overall magnitude of ENSO in CCSM4 is overestimated by ~30$\%$ over the preindustrial time period. \cite{stevenson2012will} assessed ENSO in CCSM4 (predating CESM) and observed no signal when comparing the twentieth and twenty-first-century ensembles, as also argued by \cite{philip2006shifts}. It is believed that large ensembles are needed to isolate a significant climate change response within ENSO, {\color{red}and inter-model teleconnection differences \citep{stevenson2012significant} [?]}.
+%In our study, the signal of global warming in regulating the behaviors of precipitation is also not as obvious as the impact of large scale variability (i.e. ENSO).
 
 %***and twenty-first-century simulations may be too short for identification of significant tropical variability response to climate change, suggesting that changes to ENSO impacts may be obvious before changes to oceanic tropical variability itself become significant. However, large ensembles are needed to isolate significant ENSO climate change responses, and inter-model teleconnection differences \citep{stevenson2012significant}.
 
@@ -585,7 +646,7 @@ Although, the strength of ENSO intensifies in the future with CESM, there is sti
 
 The increased cool season precipitation extremes tend to result in higher runoff events over the northwest U.S., which are in turn associated with a greater chance of flooding and a loss of snowpack. A decrease in counts of rainy days during the warm season over central and southern California, though small in magnitude, will probably intensify the drought condition due to the deficit of soil moisture with higher evaportranspiration caused by the warmer climate in the future \cite{cayan2010future, bell2004regional}.
 
-({\color{red}Summary is to be added once the main content have been settled down})
+({\color{red}Summary is to be added once the main content have been settled down} The contribution of human-induced increases in greenhouse gases to the character of precipitation is confounded by patterns of variability in the atmospheric circulation. Consistent with previous studies, changes in more extreme precipitation follow the Clausius-Clapeyron relationship more closely than total precipitation amount. The changes of the strength of ENSO remains uncertain.  However, the character of ENSO appears to be the largest factor in understanding changing precipitation extremes in the U.S. West.)
 
 %that ENSO changes may become significant on centennial time scale and This suggests that changes to ENSO impacts may take place well before changes to oceanic tropical variability itself become significant. and the lack of signal in the twentieth- versus twenty-first-century ensembles is due to their limited duration. An examination of atmospheric teleconnections, in contrast, shows that the remote influences of ENSO do respond rapidly to climate change in some regions, particularly during boreal winter. This suggests that changes to ENSO impacts may take place well before changes to oceanic tropical variability itself become significant.
 
@@ -660,7 +721,7 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 \end{center}
 \end{figure}
 
-%Figure 2
+%Figure 3
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{wd_index_Hist_ref_annual_part2.pdf}
@@ -673,7 +734,7 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 
 %{\color{red}how about switch the row and column?}
 
-%Figure 3
+%Figure 4
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{pr_mean_clm.pdf}
@@ -682,7 +743,7 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 \end{center}
 \end{figure}
 
-%Figure 4
+%Figure 5
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{wd_index_all_years_part1.pdf}
@@ -694,7 +755,7 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 %(might add the mean intensity of each range), the mean intensity did not really change
 %{\color{red}(might add the max1d and maxNd here.)}
 
-%Figure 5
+%Figure 6
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{wd_index_all_years_part2.pdf}
@@ -703,22 +764,31 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 \end{center}
 \end{figure}
 
-%Figure 5
+%Figure 7
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{wd_index_enso_wetSeason.pdf}
-\caption{Difference of precipitation behaviors between warm and cool phases of ENSO from past to future over WUS averaged of each time period.}
+\includegraphics[width=6in]{discussion_indices.pdf}
+\caption{Changes of specific humidity and horizontal wind pattern at 850hPa for moisture flux illustration, and IVT for simulations under different time period of wet season (October to March). (Note: The minimum wind vector is set to be 0.5 m/s, therefore, the wind less than 0.5 m/s is also plotted at the minimum length for better visualization.) {\color{red}For all difference plots, make sure to use a common [min,max] range as its currently difficult to tease out differences.  Difference plots should also use a different color table to the mean results (perhaps a single color color table?). }}
 \label{fig:Figure 7}
 \end{center}
 \end{figure}
 
-
-%Figure 6
+%Figure 8
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{discussion.pdf}
-\caption{Changes of moisture flux at 850hPa, and IVT for simulations under different time period and different phases of ENSO of wet season (October to March). (Note: The minimum wind vector is set to be 0.5 m/s, therefore, the wind less than 0.5 m/s is also plotted at the minimum length for better visualization.) {\color{red}For all difference plots, make sure to use a common [min,max] range as its currently difficult to tease out differences.  Difference plots should also use a different color table to the mean results (perhaps a single color color table?).  Remember that hectopascals is capitalized as hPa.}}
+\includegraphics[width=6in]{wd_index_enso_wetSeason.pdf}
+\caption{Difference of precipitation behaviors between warm and cool phases of ENSO from past to future over WUS averaged of each time period.}
 \label{fig:Figure 8}
+\end{center}
+\end{figure}
+
+
+%Figure 9
+\begin{figure}
+\begin{center}
+\includegraphics[width=6in]{discussion_enso.pdf}
+\caption{Changes of IVT for simulations under different phases of ENSO of wet season (October to March). (Note: The minimum wind vector is set to be 0.5 m/s, therefore, the wind less than 0.5 m/s is also plotted at the minimum length for better visualization.)}
+\label{fig:Figure 9}
 \end{center}
 \end{figure}
 

@@ -25,6 +25,8 @@
 \journal{jcli}
 
 \usepackage{color}
+\usepackage{rotating}
+\usepackage{tikz}
 
 %  Please choose a journal abbreviation to use above from the following list:
 % 
@@ -83,7 +85,11 @@
 %
 % Enter your Abstract here
 
-\abstract{({\color{red} To be added once the main content settled down})} 
+\abstract{{\color{red}Being particularly vulnerable to hydrological extremes of western United States (WUS), we have applied a variable-resolution Community Earth System Model (VR-CESM) to study the impacts of a changing climate on the character of precipitation. The changes of mean precipitation and precipitation distributions of both non-extreme and extreme events have been investigated based on the long-term ensemble simulations with a local grid resolution of $\sim$0.25$^\circ$, with future climate forced by the representative concentration pathway (RCP) 8.5 scenario. We found that VR-CESM can well capture the the spatial patterns of historical precipitation features including both frequency and intensity. In accordance with the Clausius-Clapeyron (C-C) relationship, accompanied by the constrained water influx and soil moisture, changes to extreme precipitation hypothesized to follow the C-C relationship more closely than total precipitation amount. Future relative humidity (RH) is constrained by competing increases in both temperature and atmospheric water vapor content, indicating that continental evaporation and oceanic water vapor transport are insufficient vapor sources when temperature reaches a certain level. There is a statistically significant increase in mean precipitation and non-extreme rainy days over the Intermountain West and Southwest U.S. when going to mid-century, although this trend is not kept to the end-of-century. Over the Northwest, extreme precipitation events have increased significantly, driven by increased integrated water vapor transport (IVT) over the eastern Pacific Ocean. However, no clear climate signal in mean precipitation or extremes is exhibited over most of California area, with large interannual variability, dominated primarily by ENSO. ENSO is a major driver of precipitation character through California, the intermountain west and the southwest with intensified impacts in the future.}} 
+
+%A comprehensive set of metrics for precipitation extremes have been evaluated over the 26-year periods corresponding to historical (1980-2005), mid-century (2025-2050) and end-of-century (2075-2100). The spatial inhomogeneous impacts and large-scale variability regulations of El Nin\~o-Southern Oscillation (ENSO) have been analyzed. 
+%, with significant improvement of fine resolution
+%and does have an impact on mean precipitation through the Cascades, 
 
 \begin{document}
 
@@ -220,9 +226,15 @@ Ensemble runs are needed to ensure that the sample adequately accounts for clima
 
 \subsection{Precipitation indices}
 
-Standard indices have been employed to characterize precipitation \citep{tebaldi2006going, zhang2011indices, sillmann2013climate}. In order to choose a comprehensive (but minimal) set that are informative to stakeholders and water managers, indices from throughout the literature have been assessed.  The indices examined include those defined by the Expert Team on Climate Change Detection and Indices (ETCCDI) \citep{karl1999clivar} that are featured in earlier studies \citep{duliere2011extreme, sillmann2013climate, diffenbaugh2005fine, singh2013precipitation} and others such as return levels, dry spell and wet spell characteristics defined by either percentiles or by selected thresholds. The indices we have chosen for this study attempt to provide a relatively comprehensive characterization of precipitation, and are summarized in Table \ref{tab:table1}.
+Standard indices have been employed to characterize precipitation \citep{tebaldi2006going, zhang2011indices, sillmann2013climate}. In order to choose a comprehensive (but minimal) set that are informative to stakeholders and water managers, indices from throughout the literature have been assessed.  The indices examined include those defined by the Expert Team on Climate Change Detection and Indices (ETCCDI) \citep{karl1999clivar} that are featured in earlier studies \citep{duliere2011extreme, sillmann2013climate, diffenbaugh2005fine, singh2013precipitation} and others such as return levels, dry spell and wet spell characteristics defined by either percentiles or by selected thresholds. As a result, the indices we have chosen for this study attempt to provide a relatively comprehensive characterization of precipitation, and are summarized in Table \ref{tab:table1}. {\color{red}We have also looked into the dry spells with different durations, however, the results only show meaningful difference for dry spell with length under 5 days (therefore, not shown).} 
 
-{\color{red}[Paul: You should probably state at some point why you don't employ drought or dry spell indices]}
+%{\color{red}[Paul: You should probably state at some point why you don't employ drought or dry spell indices]}
+%Similarly, wet spell, defined with different amount of rainy water per event, did not reveal too much interesting information, with no notable changes over wet region, though increase do happen over dry regions.
+
+%the total dry event number, with days c(5,10,15,20) from v5.nc, only show meaningful difference for consecutive days under 5days, therefore, not use this result
+%the event number when total pr event is c(5,10,20,40,80) from v5.nc did not reveal interesting information, the increase is not notable over rainy region, but do increase over dry region. see wd_index_Mid-Hist_v5.nc_wet&dry.pdf wd_index_End-Hist_v5.nc_wet&dry.pdf in the "Extremes_WUS" folder
+
+
 
 %***check zhang2011indices
 
@@ -293,6 +305,7 @@ Gridded observational datasets and reanalysis of the highest available quality, 
 
 Before proceeding, we assess the ability of VR-CESM to represent the character of precipitation over the WUS.  The indices defined in Table \ref{tab:table1} are depicted in Figures \ref{fig:histEval1}, \ref{fig:histEval2} and \ref{fig:histEval3} for VR-CESM and each of the reference datasets over the historical period (1980-2005).  We assume equal confidence in each of the reference datasets, and use Student's t-test (with UW, CPC and NARR as the three statistical samples) to identify regions where VR-CESM deviates significantly from the reference mean.  Regions where differences are statistically significant in the VR-CESM dataset are identified with stippling.
 
+
 %For all fields there is rough agreement among the reference datasets with respect to the spatial structure of each index.  
 
 %Considering the uncertainty within the reference datasets, the mean of the references are used to get the difference from the model output. T-test is applied here with UW, CPC and NARR as the three statistical samples and the historical runs as two samples averaged over the whole period, determining at each spatial point whether VR-CESM is statistically equivalent to the references as stippled in \ref{fig:Figure 2} and \ref{fig:Figure 3}.
@@ -301,7 +314,7 @@ Overall, VR-CESM largely captures the spatial patterns of precipitation and its 
 
 %Finally, the model also exhibits suppressed variance through the Great Plains (eastern edge of SDII plot), likely driven by a failure of the convection scheme to accurately capture precipitation in this region.
 
-First, VR-CESM significantly overestimates Pr over dry regions with differences between 0.2 mm to 1.5 mm, and over the eastern flank of the Cascades and on both sides of the Sierra Nevada (with relative differences reaching 50$\%$-150$\%$).  As with many regional models, VR-CESM is ``dreary'' and exhibits too many precipitation days (R1mm, Pr$\geq$1 mm/day and R5mm, 1 mm/day$\leq$ Pr $\leq$ 5 mm/day) (see Figure \ref{fig:histEval2}) {\color{red}[citation needed]}.  Nonetheless, over most regions the relative contribution of each precipitation frequency subset to total precipitation (F1mm, F5mm, F10mm, F20mm and F40mm) agrees well, suggesting that the frequency distribution describing precipitation intensity is accurately simulated almost everywhere.
+First, VR-CESM significantly overestimates Pr over dry regions with differences between 0.2 mm to 1.5 mm, and over the eastern flank of the Cascades and on both sides of the Sierra Nevada (with relative differences reaching 50$\%$-150$\%$).  As with many regional models, VR-CESM is ``dreary'' and exhibits too many precipitation days (R1mm, Pr$\geq$1 mm/day and R5mm, 1 mm/day$\leq$ Pr $\leq$ 5 mm/day) (see Figure \ref{fig:histEval2}) {\color{red}\citep{stephens2010dreary}}.  Nonetheless, over most regions the relative contribution of each precipitation frequency subset to total precipitation (F1mm, F5mm, F10mm, F20mm and F40mm) agrees well, suggesting that the frequency distribution describing precipitation intensity is accurately simulated almost everywhere.
 
 Second, the spatial pattern of precipitation intensity (SDII) agrees well between VR-CESM and references with agreement everywhere except in the Great Plains (the eastern edge of our domain) and in California's Central Valley.  The Great Plains is not a focus of this study, but the suppressed intensity is primarily during the warm season (April-September) and so likely represents a failure of the convection scheme to adequately simulate variability in this region.  This bias is also observed in 0.25$^\circ$ uniform-resolution CESM simulations \citep{small2014new}, and so is not a symptom of the eastern edge of the variable-resolution transition region.
 
@@ -487,11 +500,11 @@ On comparing \textsf{hist} and \textsf{mid}, it is clear that the number of rain
 
 %The combined changes of those is displayed when comparing Hist and End. In these same regions, there is no statistically significant impact on extreme precipitation associated with the climate signal.
 
-Although essentially all regions exhibit an increase in the most extreme precipitation events (Pr $\geq$ 10 mm/day), this increase is only statistically significant through the intermountain west and in the Pacific northwest (for Pr $\geq$ 20 mm/day).  When comparing \textsf{mid} to \textsf{end}, there is a clear and significant increase in extreme precipitation events over the northwest coast ($\sim$ 20-30$\%$) and eastern flank of the Cascades ($>$ 40$\%$). This result is consistent with the result of \cite{dominguez2012changes}, who observe a robust increase in winter precipitation extremes toward the latter half of the 21st century with an ensemble of RCMs.  The increase in the northwest is accompanied by a decrease in non-extreme precipitation days, indicative of drying over the warm season.  
+Although essentially all regions exhibit an increase in the extreme precipitation events (Pr $\geq$ 10 mm/day), this increase is only statistically significant through the intermountain west and in the Pacific northwest (for Pr $\geq$ 20 mm/day).  When comparing \textsf{mid} to \textsf{end}, there is a clear and significant increase in extreme precipitation events over the northwest coast ($\sim$ 20-30$\%$) and eastern flank of the Cascades ($>$ 40$\%$). This result is consistent with the result of \cite{dominguez2012changes}, who observe a robust increase in winter precipitation extremes toward the latter half of the 21st century with an ensemble of RCMs.  The increase in the northwest is accompanied by a decrease in non-extreme precipitation days, indicative of drying over the warm season.  
 
 %There is a slight, but insignificant decrease over the Cascades and the Sierra Nevada (significance is low due to the high variability of precipitation). No notable predicted changes have been observed over California.
 
-{\color{red}[Paul:  For each region it would be extremely valuable to include changes to the return frequency of the most extreme events -- i.e. in the Northwest a five-year storm becomes a two-year storm]}
+%{\color{red}[Paul:  For each region it would be extremely valuable to include changes to the return frequency of the most extreme events -- i.e. in the Northwest a five-year storm becomes a two-year storm]}
 
 Notably, our results show no significant change in precipitation character is predicted for California.  In fact, the precipitation signal under a warmer climate is more ambiguous for California \citep{neelin2013california} in light of the extreme variability of the region on interannual time scales \citep{dettinger2011climate}. \cite{kim2005projection} found that under global warming, heavy precipitation events increase in frequency in the mountainous regions of the northern California Coastal Range and the Sierra Nevada. However, our results show a small decrease in extreme precipitation over the Sierra Nevada (although the decrease is not statistically significant).  This leads us to the likely conclusion (particularly in light of VR-CESM's own biases in this region) that projections in this region are highly dependent on model formulation.
 
@@ -503,6 +516,7 @@ Notably, our results show no significant change in precipitation character is pr
 %check the inter-annual variation of Pr to see why the changes are not sig: out of expectation, the inter-annual variability actually is not particularly high over dry region of southwest. check the wd_index_std_hist_mid_end.pdf 
 
 For the most extreme precipitation events (Pr $\geq$ 40 mm/day), there is a statistically significant increase along the northwest coast ($\geq$ 60$\%$), the Cascades ($\sim$ 50$\%$) and Northern Rockies ($\geq$ 60$\%$) by end-of-century. Significant increases are also apparent along the Klamath range in California of about 20-40$\%$ from \textsf{hist} to \textsf{end}. Changes in accumulated precipitation for these events are consistent with the change in their frequency (see Figure \ref{fig:difIndex2}).  With a projected increase of temperatures in this region of 4-5 K over the cool season, this increase is in excess of the 7\% per degree change that would be anticipated from the C-C relationship (Figure \ref{fig:discussIndex}a).  In this case, the probable cause of this excess is due to the intensification of the storm track along the coast discussed in section \ref{sec:ResultsMeanClimatology}.
+
 
 %Overall, these results indicate more extreme precipitation over the northwest U.S with changes in precipitation extremes following more consistently with the C-C relationship.
 
@@ -526,7 +540,7 @@ For the most extreme precipitation events (Pr $\geq$ 40 mm/day), there is a stat
 
 \subsection{Regional precipitation frequency distributions}
 
-To further investigate the regional heterogeneity of changing precipitation, frequency distributions of daily rainfall for rainy days are plotted in Figure \ref{fig:prPDF} for (a) the Pacific Northwest, including Washington and Oregon, (b) California, (c) the Intermountain West, including Nevada and Utah and (d) the Southwest, including Arizona and New Mexico {\color{red}[Paul: Region labels need to be moved earlier in the text, and we probably need a figure to identify how we refer to regions (add Northern Rockies (Idaho, Montana and Wyoming) and Great Plains (Dakotas through north Texas)}.  Frequency plots are developed using simulation outputs at all grid points within each region.  {\color{red}[Paul: As discussed, need to split these plots into non-extreme / extreme]}  Over the Northwest, precipitation intensifies with upper tail going more extreme in the future, especially during \textsf{end}. No apparent changes can be observed for the California region, except with more extreme upper tail for Pr exceeding 100 mm/day during \textsf{end}, which is due to the increased precipitation extremes over the northern California as shown in Figure \ref{fig:difIndex2}. Over the inter-mountainous region, similar trends of changes can be seen as the northwest area, with intensified mean and extreme precipitation. For the southwest area, precipitation tends to be more extreme with a moderate level, although no notable difference exists between \textsf{mid} and \textsf{end}.
+To further investigate the regional heterogeneity of changing precipitation, frequency distributions of daily rainfall for rainy days are plotted in Figure \ref{fig:prPDF} for (a) the Pacific Northwest, including Washington and Oregon, (b) California, (c) the Intermountain West, including Nevada and Utah and (d) the Southwest, including Arizona and New Mexico.  Frequency plots are developed using simulation outputs at all grid points within each region. Over the Northwest, precipitation intensifies with upper tail going more extreme in the future, especially during \textsf{end}. No apparent changes can be observed for the California region, except with more extreme upper tail for Pr exceeding 100 mm/day during \textsf{end}, which is due to the increased precipitation extremes over the northern California as shown in Figure \ref{fig:difIndex2}. Over the inter-mountainous region, similar trends of changes can be seen as the northwest area, with intensified mean and extreme precipitation. For the southwest area, precipitation tends to be more extreme with a moderate level, although no notable difference exists between \textsf{mid} and \textsf{end}.
 
 %However, it seems that wetter area tends to have more intense changes of moderate precipitation including 70p, 80p and 90p in future than drier area at a moderate level (around 0.6). However, for the relatively very extreme precipitation around 95p, the relationship is opposite, i.e. wetter area tends to have less intense changes of very extreme precipitation in future than drier area also at a moderate level (around 0.6).
 
@@ -553,11 +567,16 @@ As discussed earlier, this study assumes a fixed pattern of SSTs that is consist
 
 In our study, mean SSTs over the Ni\~no 3.4 region are 26.83, 28.62 and 30.54$^\circ$C for \textsf{hist}, \textsf{mid} and \textsf{end} respectively. Based on the ONI index values, the mean SST anomalies are 1.38, 1.71 and 2.30 K during El Ni\~no years, and -1.16, -1.62 and -1.43 K during La Ni\~na years, again for \textsf{hist}, \textsf{mid} and \textsf{end}. It is apparent within that within this dataset the magnitude of SST anomalies associated with ENSO has intensified. SST anomalies of each year and each month, and their associated spatial pattern when averaged over the warm and cool phases of ENSO can be found in the supplement, suggesting an increasing frequency of El Ni\~no through \textsf{mid} and an almost doubled frequency of La Ni\~na during \textsf{mid} and \textsf{end} compared to the \textsf{hist}. 
 
+
 %In \textsf{mid} and \textsf{hist}, ENSO is observed to intensify, which appears to be related with the changes of the strength of El Ni\~no and La Ni\~na. This can be explained by the SST anomaly magnitude (detrended) of warm and cold phases (see the supplement). \cite{deflorio2013western} also found a statistically significant linkages with ENSO and PDO for both the overall and extreme intensity of wintertime precipitation over the WUS using CCSM4 (earlier form of CESM). Strengthening storm patterns associated with ENSO are also found by \cite{maloney2014north} over California using CMIP5 output under RCP8.5. 
 
 %***{\color{red}(Will this be the reason that causing increasing trend over northwest and no notable changes over most of the California regions? Might need to check for the same phase.) [Huang: It seems not. The increasing trend is notable in both phases averagely. The no notable changes have been discussed at the Precipitation indices part. Actually, since summing all the anomaly, the value will still be the average SST at each phase, that's basically what anomalies mean. Therefore, the results showed in the precipitation indices section should still be mainly regulated by the effect of climate forcing, i.e. the increase of mean SST and GHGs. Therefore, the changes of frequency of ENSO will mainly help explaining the possible changes of variability in the future based on the mean precipitation features. The ENSO effects here mainly explain the difference within each time period rather than the difference among different time periods. However, the precipitation extremes are still related with the frequency of the ENSO.]}
 
+
 {\color{red}[Huang: As SSTs increase in the future, is not it normal for the anomaly of ENSO to be increased to compensate the changes of water vapor capacity? Might email Neale about this]}
+
+%{\color{red}(Huang: As SSTs increase in the future, is not it normal for the anomaly of ENSO to be increased to compensate the changes of water vapor capacity? Might email Neale about this.)}
+
 
 %			Hist                Mid            		End
 %La Ni\~na 		6, -1.163667  11, -1.616909  	11, -1.430182
@@ -722,17 +741,25 @@ We have also assessed the impacts of the Pacific Decadal Oscillation (PDO) on pr
 
 %The projected changes in the precipitation characteristics in the WUS are mainly associated with increases in the cool season water vapor influx from the Pacific Ocean. 
 
+{\color{red}In this study, the changes of precipitation over the 21st Century are predicted and analyzed for the WUS, based on long-term ensemble runs conducted using VR-CESM with finest local grid resolution of $\sim$0.25$^\circ$. Climate forcing for future predication is constrained under RCP8.5 scenario. 
+
+Based on the evaluation against historical observations, we found that VR-CESM can well capture the the spatial patterns of precipitation including both frequency and intensity, although overestimation exhibits over the eastern flank of the Cascades and sides of the Sierra Nevada. The improvement in representing precipitation features with high resolution is clear.
+
+In accordance with the Clausius-Clapeyron (C-C) relationship, accompanied by the constrained water influx and soil moisture, changes to extreme precipitation hypothesized to follow the C-C relationship more closely than total precipitation amount. We have investigated both the mean changes of precipitation and distributions of both non-extreme and extreme events projected by the VR-CESM model under climate forcing.
+
+Under the basically spatially uniform climate warming in the future, over land, future RH is constrained by competing increases in both temperature and atmospheric water vapor content. RH tends to increase in regions where Tavg increase is below $\sim$2 K, but decrease when Tavg anomaly exceeds $\sim$2 K. This suggests that continental evaporation and oceanic water vapor transport are insufficient vapor sources when temperature reaches a certain level. As a result, mean precipitation has increased moderately during the cool season with heterogeneous pattern. However, dry area including the intermountain west and southwest regions tend to keep dry when Tavg keeps increasing to the end of 21st century.
+
+Over the Intermountain West and Southwest, with increase in warm season RH through mid-century, there is a statistically significant increase in Pr and non-extreme rainy days due to increased convection. This increase is not consistent observed over end-of-century, followed by a reduced RH. A significant of extreme precipitation is also projected over the intermountain west.
+
+Over the Northwest, increase in extreme precipitation events (state return time of 20mm/day and 40mm/day events) is accompanied by a substantial moistening of the cool season, even though total precipitation days doesn't change. This is driven by increased IVT over the eastern Pacific Ocean, associated with atmospheric rivers (ARs) and/or orographic uplift. Increased drying over the warm season is driven by a reduction in RH, with significantly decrease of non-extreme precipitation.
+
+Over California, except the northern part, there is no clear climate signal in mean precipitation or extremes. Precipitation in this area is dominated by interannual variability, primarily associated with ENSO. As further proved, ENSO plays as a significant driver of precipitation, modulating the storm track behavior over western U.S. During the El Nin\~o phase, there is an increase in on-shore moisture flux over California that triggers a returning circulation through the northwest. The large-scale pattern impact of ENSO is also a source of uncertainty in our results, due to the uncertain changes of El Nin\~o under global warming based on the studies so far.
+
+From the SST prediction dataset we used in this study, the magnitude of SST anomalies associated with ENSO has intensified. We observe that ENSO is a major driver of precipitation character through California, the intermountain west and the southwest and does have an impact on mean precipitation through the Cascades. In contrast, the impacts of climate forcing are visually similar to the pattern of the difference between the different time periods and primarily impacts both extreme and non-extreme precipitation in the northwest and intermountain west.
+
 The increased cool season precipitation extremes tend to result in higher runoff events over the northwest U.S., which are in turn associated with a greater chance of flooding and a loss of snowpack. A decrease in counts of rainy days during the warm season over central and southern California, though small in magnitude, will probably intensify the drought condition due to the deficit of soil moisture with higher evaportranspiration caused by the warmer climate in the future \cite{cayan2010future, bell2004regional}.
 
-({\color{red}Summary is to be added once the main content have been settled down} The contribution of human-induced increases in greenhouse gases to the character of precipitation is confounded by patterns of variability in the atmospheric circulation. Consistent with previous studies, changes in more extreme precipitation follow the Clausius-Clapeyron relationship more closely than total precipitation amount. The changes of the strength of ENSO remains uncertain.  However, the character of ENSO appears to be the largest factor in understanding changing precipitation extremes in the U.S. West.)
-
-{\color{red}Notes for the summary:
-\begin{itemize}
-\item Northwest:  Increase in extreme precipitation events (state return time of 20mm/day and 40mm/day events) accompanied by a substantial moistening of the cool season, even though total precipitation days doesn't change.  This is driven by increased IVT over the eastern Pacific.  Increased drying over the warm season driven by a reduction in RH.
-\item California:  No clear climate signal in mean precipitation or extremes.  Precipitation in this area is dominated by interannual variability, primarily associated with ENSO.
-\item Intermountain West and Southwest:  Increase in warm season RH through mid-century followed by a reduced RH through end-of-century.  Nonetheless accompanied by a statistically significant increase in Pr and non-extreme rainy days due to increased convection (?)
-\end{itemize}
-}
+The contribution of human-induced increases in greenhouse gases to the character of precipitation is confounded by patterns of variability in the atmospheric circulation. Consistent with previous studies, changes in more extreme precipitation follow the Clausius-Clapeyron relationship more closely than total precipitation amount. The changes of the strength of ENSO remains uncertain. However, the character of ENSO appears to be a very important contributor in understanding changing precipitation extremes in the U.S. West.}
 
 %references:
 %***Changes in temperature and precipitation extremes in the CMIP5 ensemble.pdf is a good resources for changes of pr globally. see Figure 4 to 5. Could add this to discussion part
@@ -824,18 +851,18 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 %{\color{red}how about switch the row and column?}
 
 %Figure 5
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
 \includegraphics[width=6in]{pr_mean_clm.pdf}
 \caption{The mean precipitation (Pr), 2m average temperature (Tavg), and 2m relative humidity (RH) averaged over each time period.  Areas with statistically significance differences are marked with stippling.}
 \label{fig:meanClm}
 \end{center}
-\end{figure}
+\end{sidewaysfigure}
 
 %Figure 6
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{wd_index_all_years_part1.pdf}
+\includegraphics[width=6in, angle = 90]{wd_index_all_years_part1.pdf}
 \caption{Differences of precipitation indices Pr (mm/day), SDII and R$\ast$mm between \textsf{hist}, \textsf{mid} and \textsf{end} average.  Areas with statistically significance differences are marked with stippling.}
 \label{fig:difIndex1}
 \end{center}
@@ -847,7 +874,7 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 %Figure 7
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{wd_index_all_years_part2.pdf}
+\includegraphics[width=6in, angle = 90]{wd_index_all_years_part2.pdf}
 \caption{Differences of precipitation indices Pr (mm/year) and P$\ast$mm between \textsf{hist}, \textsf{mid} and \textsf{end} average.  Areas with statistically significance differences are marked with stippling.}
 \label{fig:difIndex2}
 \end{center}
@@ -885,7 +912,7 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{discussion_enso.pdf}
-\caption{Changes of IVT for simulations under different phases of ENSO of wet season (October to March). (Note: The minimum wind vector is set to be 0.5 m/s, therefore, the wind less than 0.5 m/s is also plotted at the minimum length for better visualization.)}
+\caption{Changes of IVT for simulations under different phases of ENSO of wet season (October to March) over rainy days averaged yearly, with seasonal mean wind patterns at 850hPa(Note: The minimum wind vector is set to be 0.5 m/s, therefore, the wind less than 0.5 m/s is also plotted at the minimum length for better visualization.)}
 \label{fig:discussEnso}
 \end{center}
 \end{figure}

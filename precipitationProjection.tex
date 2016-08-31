@@ -85,7 +85,10 @@
 %
 % Enter your Abstract here
 
-\abstract{{\color{red}Being particularly vulnerable to hydrological extremes of western United States (WUS), we have applied a variable-resolution Community Earth System Model (VR-CESM) to study the impacts of a changing climate on the character of precipitation. The changes of mean precipitation and precipitation distributions of both non-extreme and extreme events have been investigated based on the long-term ensemble simulations with a local grid resolution of $\sim$0.25$^\circ$, with future climate forced by the representative concentration pathway (RCP) 8.5 scenario. We found that VR-CESM can well capture the the spatial patterns of historical precipitation features including both frequency and intensity. In accordance with the Clausius-Clapeyron (C-C) relationship, accompanied by the constrained water influx and soil moisture, changes to extreme precipitation hypothesized to follow the C-C relationship more closely than total precipitation amount. Future relative humidity (RH) is constrained by competing increases in both temperature and atmospheric water vapor content, indicating that continental evaporation and oceanic water vapor transport are insufficient vapor sources when temperature reaches a certain level. There is a statistically significant increase in mean precipitation and non-extreme rainy days over the Intermountain West and Southwest U.S. when going to mid-century, although this trend is not kept to the end-of-century. Over the Northwest, extreme precipitation events have increased significantly, driven by increased integrated water vapor transport (IVT) over the eastern Pacific Ocean. However, no clear climate signal in mean precipitation or extremes is exhibited over most of California area, with large interannual variability, dominated primarily by ENSO. ENSO is a major driver of precipitation character through California, the intermountain west and the southwest with intensified impacts in the future.}} 
+\abstract{The changing character of precipitation frequency and intensity in the western United States over the 21st century is investigated using an ensemble of 26-year simulations with the variable-resolution Community Earth System Model (VR-CESM) at a local grid resolution of $\sim$0.25$^\circ$.  Simulations are forced using prescribed sea-surface temperatures, sea-ice extent and greenhouse gas concentrations from the representative concentration pathway (RCP) 8.5 scenario.  VR-CESM is shown to be effective at accurately capturing the spatial patterns of the historical precipitation climatology. In the Intermountain West and Southwest U.S. we observe a statistically significant increase in mean precipitation and rainy days through mid-century, although this trend is tampered by end of century in response to a decrease in relative humidity.  In the Pacific Northwest, extreme precipitation events are observed to increase significantly as a result of increased cool season integrated vapor transport.  In particular, extreme precipitation in this region appears to increase more rapidly than would be predicted by the Clausius-Clapeyron relationship.  No clear climate signal emerges in mean precipitation or for extremes in California, where the precipitation climatology is subject to large interannual variability that is tied more closely to ENSO.}
+
+
+%In accordance with the Clausius-Clapeyron (C-C) relationship, accompanied by the constrained water influx and soil moisture, changes to extreme precipitation hypothesized to follow the C-C relationship more closely than total precipitation amount. Future relative humidity (RH) is constrained by competing increases in both temperature and atmospheric water vapor content, indicating that continental evaporation and oceanic water vapor transport are insufficient vapor sources when temperature reaches a certain level. There is a statistically significant increase in mean precipitation and non-extreme rainy days over the Intermountain West and Southwest U.S. when going to mid-century, although this trend is not kept to the end-of-century. Over the Northwest, extreme precipitation events have increased significantly, driven by increased integrated water vapor transport (IVT) over the eastern Pacific Ocean. However, no clear climate signal in mean precipitation or extremes is exhibited over most of California area, with large interannual variability, dominated primarily by ENSO. ENSO is a major driver of precipitation character through California, the intermountain west and the southwest with intensified impacts in the future.} 
 
 %A comprehensive set of metrics for precipitation extremes have been evaluated over the 26-year periods corresponding to historical (1980-2005), mid-century (2025-2050) and end-of-century (2075-2100). The spatial inhomogeneous impacts and large-scale variability regulations of El Nin\~o-Southern Oscillation (ENSO) have been analyzed. 
 %, with significant improvement of fine resolution
@@ -116,7 +119,7 @@ Although future climate projections are subject to large uncertainties, climate 
 
 %. Precipitation extremes, as measured by various metrics, are predicted to change by future warming based on the results of these simulations
 
-This issue of insufficient regional-scale climate information has been a major outstanding problem in climate science, as stakeholders and water managers typically require fine-scale information on climate impacts in order to effectively develop adaptation and mitigation strategies.  Dynamical downscaling with regional climate models (RCMs) has been one of the few tools available to ascertain the frequency, intensity, and duration of extreme events at the needed scales.  By only simulating a limited regional domain, RCMs better capture fine-scale dynamical features with high horizontal resolution \citep{bell2004regional, frei2006future, rauscher2010resolution, wehner2013very}. Higher resolution enables more accurate simulation of precipitation extremes, which are driven by circulation patterns, cloudiness, land use, land/water contrast, snowpack and topography \citep{leung2003regional, diffenbaugh2005fine, salathe2008high, wehner2010effect}. For example, \cite{leung2003hydroclimate} showed that the higher-resolution RCMs yield more realistic precipitation patterns and produce more frequent heavy precipitation over the western U.S. (WUS), consistent with observations. \cite{salathe2008high} found notable different trends for temperature and precipitation over the Pacific Northwest using the a high-resolution RCM for future climate simulations, than in the global model in which mesoscale processes are not resolved.
+This issue of insufficient regional-scale climate information has been a major outstanding problem in climate science, as stakeholders and water managers typically require fine-scale information on climate impacts in order to effectively develop adaptation and mitigation strategies.  Dynamical downscaling with regional climate models (RCMs) has been one of the few tools available to ascertain the frequency, intensity, and duration of extreme events at the needed scales.  By only simulating a limited regional domain, RCMs better capture fine-scale dynamical features with high horizontal resolution \citep{bell2004regional, frei2006future, rauscher2010resolution, wehner2013very}. Higher resolution enables more accurate simulation of precipitation extremes, which are driven by circulation patterns, cloudiness, land use, land/water contrast, snowpack and topography \citep{leung2003regional, diffenbaugh2005fine, salathe2008high, wehner2010effect}. For example, \cite{leung2003hydroclimate} showed that the higher-resolution RCMs yield more realistic precipitation patterns and produce more frequent heavy precipitation over the western U.S. (WUS), consistent with observations. \cite{diffenbaugh2005fine} studied both extreme temperature and precipitation events over the contiguous United States using a RCM configured at 25 km horizontal resolution, and demonstrated that fine-scale processes were critical for accurate assessment of local- and regional-scale climate change vulnerability. \cite{salathe2008high} found significant differences in trends for temperature and precipitation over the Pacific Northwest using a high-resolution RCM for future climate simulations.  And \cite{ashfaq2016high} observed a 7.4\% increase in precipitation from extremes over the contiguous U.S. from simulations with RegCM4 driven by CMIP5 global data.
 
 %\cite{diffenbaugh2005fine} studied both extreme temperature and precipitation events over the contiguous United States using a RCM configured at 25 km horizontal resolution, and demonstrated that fine-scale processes were critical for accurate assessment of local- and regional-scale climate change vulnerability.
 
@@ -197,7 +200,7 @@ CESM is a state-of-the-art Earth modeling framework, consisting of coupled atmos
 
 %The coupling infrastructure in CESM communicates the interfacial states and fluxes between each component model to ensure conservation. Since we follow AMIP protocols, only the atmosphere and land model are integrated dynamically. The FAMIPC5 (F$\_$AMIP$\_$CAM5) component set, which mainly supports atmospheric, oceanic, land and sea ice models, is chosen for these simulations. In CAM5, cloud microphysics is parameterized using the two-moment scheme with with ice supersaturation \citep{ morrison2008new, gettelman2008new}, and the deep convection process is treated by Zhang and McFarlane (ZM) cumulus scheme \citep{zhang1995sensitivity}. A more detailed discussion of the CAM5 configuration can be found in \citet{neale2010description}.
 
-Simulations have been performed for the historical period (1979-2005, hereafter referred to as \textsf{hist} and for two future periods: 2024-2050 (hereafter referred to as \textsf{mid} and 2074-2100 (hereafter referred to as \textsf{end}.  Daily output are recorded for each period on the native SE grid and then remapped to a regional latitude-longitude mesh \citep{ullrich2015arbitrary,ullrich2016arbitrary}.  For purposes of analysis, the first year of each time period was discarded as a spin-up period to allow adequate time for the initialized land and atmosphere to equilibrate. The 26-year duration was chosen to provide an adequate sampling of annual variability for each time phase. As mentioned earlier, GHG concentrations are set based on RCP8.5. Historical SSTs and sea ice are prescribed at 1$^\circ$ resolution, as described by \citet{hurrell2008new}. SSTs and sea ice for each future period are developed from fully-coupled RCP 8.5 climate simulations with bias correction applied  (Cecile Hannay, personal communication).  Annually-updated land surface datasets, which prescribe land-use characteristics, are interpolated from $0.5^\circ$ to the land model grid.
+Simulations have been performed for the historical period (1979-2005, hereafter referred to as \textsf{hist}) and for two future periods: 2024-2050 (hereafter referred to as \textsf{mid}) and 2074-2100 (hereafter referred to as \textsf{end}).  Daily output are recorded for each period on the native SE grid and then remapped to a regional latitude-longitude mesh \citep{ullrich2015arbitrary,ullrich2016arbitrary}.  For purposes of analysis, the first year of each time period was discarded as a spin-up period to allow adequate time for the initialized land and atmosphere to equilibrate. The 26-year duration was chosen to provide an adequate sampling of annual variability for each time phase. As mentioned earlier, GHG concentrations are set based on RCP8.5. Historical SSTs and sea ice are prescribed at 1$^\circ$ resolution, as described by \citet{hurrell2008new}. SSTs and sea ice for each future period are developed from fully-coupled RCP 8.5 climate simulations with bias correction applied  (Cecile Hannay, personal communication).  Annually-updated land surface datasets, which prescribe land-use characteristics, are interpolated from $0.5^\circ$ to the land model grid.
 
 %Using prescribed SSTs in place of a coupled ocean model considerably reduces the computation cost and so allows the atmospheric model to be run at a higher overall resolution. 
 
@@ -231,7 +234,7 @@ Ensemble runs are needed to ensure that the sample adequately accounts for clima
 
 \subsection{Precipitation indices}
 
-Standard indices have been employed to characterize precipitation \citep{tebaldi2006going, zhang2011indices, sillmann2013climate}. In order to choose a comprehensive (but minimal) set that are informative to stakeholders and water managers, indices from throughout the literature have been assessed.  The indices examined include those defined by the Expert Team on Climate Change Detection and Indices (ETCCDI) \citep{karl1999clivar} that are featured in earlier studies \citep{duliere2011extreme, sillmann2013climate, diffenbaugh2005fine, singh2013precipitation} and others such as return levels, dry spell and wet spell characteristics defined by either percentiles or by selected thresholds. As a result, the indices we have chosen for this study attempt to provide a relatively comprehensive characterization of precipitation, and are summarized in Table \ref{tab:table1}. {\color{red}We have also looked into the dry spells with different durations, however, the results only show meaningful difference for dry spell with length under 5 days (therefore, not shown).} 
+Standard indices have been employed to characterize precipitation \citep{tebaldi2006going, zhang2011indices, sillmann2013climate}. In order to choose a comprehensive (but minimal) set that are informative to stakeholders and water managers, indices from throughout the literature have been assessed.  The indices examined include those defined by the Expert Team on Climate Change Detection and Indices (ETCCDI) \citep{karl1999clivar} that are featured in earlier studies \citep{duliere2011extreme, sillmann2013climate, diffenbaugh2005fine, singh2013precipitation} and others such as return levels, dry spell and wet spell characteristics defined by either percentiles or by selected thresholds. As a result, the indices we have chosen for this study attempt to provide a relatively comprehensive characterization of precipitation, and are summarized in Table \ref{tab:table1}. Indices related to dry spells of variable duration have been investigated in this study, but only exhibited meaningful differences for dry spell periods under 5 days and so are not discussed.
 
 %{\color{red}[Paul: You should probably state at some point why you don't employ drought or dry spell indices]}
 %Similarly, wet spell, defined with different amount of rainy water per event, did not reveal too much interesting information, with no notable changes over wet region, though increase do happen over dry regions.
@@ -746,25 +749,25 @@ We have also assessed the impacts of the Pacific Decadal Oscillation (PDO) on pr
 
 %The projected changes in the precipitation characteristics in the WUS are mainly associated with increases in the cool season water vapor influx from the Pacific Ocean. 
 
-{\color{red}In this study, the changes of precipitation over the 21st Century are predicted and analyzed for the WUS, based on long-term ensemble runs conducted using VR-CESM with finest local grid resolution of $\sim$0.25$^\circ$. Climate forcing for future predication is constrained under RCP8.5 scenario. 
+In this study, an ensemble of 26-year simulations have been conducted using VR-CESM with finest local grid resolution of $\sim$0.25$^\circ$ to assess the changing character of precipitation over the 21st Century in the WUS. Climate forcing for future projections is prescribed under the RCP8.5 ``business-as-usual'' scenario. 
 
-Based on the evaluation against historical observations, we found that VR-CESM can well capture the the spatial patterns of precipitation including both frequency and intensity, although overestimation exhibits over the eastern flank of the Cascades and sides of the Sierra Nevada. The improvement in representing precipitation features with high resolution is clear.
+Evaluated against historical reanalysis and gridded data, VR-CESM was found to accurately capture the spatial patterns of precipitation, including precipitation frequency and intensity, although it exhibited an overestimation of precipitation over the eastern flank of the Cascades, throughout California's Central Valley and along the Sierra Nevada.  Nonetheless, there was clear improvement in the representation of precipitation features when compared with coarse 1$^\circ$ resolution simulations.
 
-In accordance with the Clausius-Clapeyron (C-C) relationship, accompanied by the constrained water influx and soil moisture, changes to extreme precipitation hypothesized to follow the C-C relationship more closely than total precipitation amount. We have investigated both the mean changes of precipitation and distributions of both non-extreme and extreme events projected by the VR-CESM model under climate forcing.
+Both mean changes to precipitation and distributions of both non-extreme and extreme events projected by the VR-CESM model under climate forcing.  Although constrained by water influx and soil moisture, changes to extreme precipitation are hypothesized to follow the C-C relationship more closely than total precipitation amount. 
 
-Under the basically spatially uniform climate warming in the future, over land, future RH is constrained by competing increases in both temperature and atmospheric water vapor content. RH tends to increase in regions where Tavg increase is below $\sim$2 K, but decrease when Tavg anomaly exceeds $\sim$2 K. This suggests that continental evaporation and oceanic water vapor transport are insufficient vapor sources when temperature reaches a certain level. As a result, mean precipitation has increased moderately during the cool season with heterogeneous pattern. However, dry area including the intermountain west and southwest regions tend to keep dry when Tavg keeps increasing to the end of 21st century.
+From the VR-CESM results, the warming response to the RCP8.5 climate forcing exhibited roughly uniform character, although warming was more pronounced away from the coast and to the north.  Future relative humidity (RH) was observed to be constrained by competing increases in both temperature and atmospheric water vapor content. RH tended to increase in regions where average temperature increase was below $\sim$2 K, and decrease when average temperature increase exceeded $\sim$2 K. This suggests that continental evaporation and oceanic water vapor transport are insufficient vapor sources to maintain RH levels above a certain threshold temperature.  In response, mean precipitation increase is fairly inhomogeneous, with a more pronounced increase in the Northwest where vapor transport is enhanced.  %Modest increases in precipitation through mid-century through the intermountain west and southwest region tended to reverse through the end-of-century.  %However, dry areas including the intermountain west and southwest regions tend to keep dry when Tavg keeps increasing to the end of 21st century.
 
-Over the Intermountain West and Southwest, with increase in warm season RH through mid-century, there is a statistically significant increase in Pr and non-extreme rainy days due to increased convection. This increase is not consistent observed over end-of-century, followed by a reduced RH. A significant of extreme precipitation is also projected over the intermountain west.
+Over the intermountain west and southwest, an increase in warm season RH through mid-century led to a statistically significant increase in precipitation and non-extreme rainy days due to increased convection. This increase levels off through end-of-century, when increased temperatures are observed to drive a reduction in RH.  Nonetheless, there is a significant increase in extreme precipitation episodes ($\geq$ 10 mm/day) over the intermountain west which is not observed in the southwest.
 
-Over the Northwest, increase in extreme precipitation events (state return time of 20mm/day and 40mm/day events) is accompanied by a substantial moistening of the cool season, even though total precipitation days doesn't change. This is driven by increased IVT over the eastern Pacific Ocean, associated with atmospheric rivers (ARs) and/or orographic uplift. Increased drying over the warm season is driven by a reduction in RH, with significantly decrease of non-extreme precipitation.
+Over the northwest, there is a clear shift from non-extreme precipitation events to extreme precipitation events associated with a moistening of the cool season and drying through the warm season.  Although the total number of annual precipitation days remains relatively constant, there is a decrease in $< 10$ mm/day precipitation days and an increase in $> 20$ mm/day precipitation days.  In each case, the change is on the order of 10 days/year.  This change is driven by increased IVT over the eastern Pacific, associated with atmospheric river (AR) episodes. Increased drying over the warm season is driven by a reduction in RH.  Increased cool season precipitation extremes in this region tend to result in high runoff events, which are in turn associated with a greater chance of flooding, particularly from rain-on-snow events.
 
-Over California, except the northern part, there is no clear climate signal in mean precipitation or extremes. Precipitation in this area is dominated by interannual variability, primarily associated with ENSO. As further proved, ENSO plays as a significant driver of precipitation, modulating the storm track behavior over western U.S. During the El Nin\~o phase, there is an increase in on-shore moisture flux over California that triggers a returning circulation through the northwest. The large-scale pattern impact of ENSO is also a source of uncertainty in our results, due to the uncertain changes of El Nin\~o under global warming based on the studies so far.
+Over California, except along the northernmost coast, there is no clear climate signal apparent in the mean precipitation or extremes. Interannual variability in this region associated with ENSO dominates precipitation patterns throughout the historical period and the 21st century. ENSO drives precipitation behavior by modulating the midlatitudinal storm track in this region.  In particular, during the El Nin\~o phase, there is an increase in on-shore moisture flux over California that triggers a returning circulation through the northwest.  The results over California highlight the importance of understanding the response of ENSO to climate change (which is still largely inconsistent in CMIP5 climate models and so is a key source of uncertainty in our results), since variations in the magnitude or structure of ENSO will have immediate consequences for precipitation in this region.
 
-From the SST prediction dataset we used in this study, the magnitude of SST anomalies associated with ENSO has intensified. We observe that ENSO is a major driver of precipitation character through California, the intermountain west and the southwest and does have an impact on mean precipitation through the Cascades. In contrast, the impacts of climate forcing are visually similar to the pattern of the difference between the different time periods and primarily impacts both extreme and non-extreme precipitation in the northwest and intermountain west.
+The projected SSTs utilized for this study through end-of-century suggest that SST anomalies associated with ENSO will intensify. The impacts of ENSO are wide-reaching, with a statistically significant response observed in the character of precipitation throughout California, the intermountain west and the southwest regions, as well as impacting mean precipitation through the Cascades.  In contrast, the significance of climate forcing (when compensating for ENSO) largely matched the differences observed between time periods, and had its greatest impact on both extreme and non-extreme precipitation in the northwest and intermountain west.
 
-The increased cool season precipitation extremes tend to result in higher runoff events over the northwest U.S., which are in turn associated with a greater chance of flooding and a loss of snowpack. A decrease in counts of rainy days during the warm season over central and southern California, though small in magnitude, will probably intensify the drought condition due to the deficit of soil moisture with higher evaportranspiration caused by the warmer climate in the future \cite{cayan2010future, bell2004regional}.
+%A decrease in counts of rainy days during the warm season over central and southern California, though small in magnitude, will likely intensify the drought condition due to the deficit of soil moisture with higher evapotranspiration caused by the warmer climate in the future \cite{cayan2010future, bell2004regional}.
 
-The contribution of human-induced increases in greenhouse gases to the character of precipitation is confounded by patterns of variability in the atmospheric circulation. Consistent with previous studies, changes in more extreme precipitation follow the Clausius-Clapeyron relationship more closely than total precipitation amount. The changes of the strength of ENSO remains uncertain. However, the character of ENSO appears to be a very important contributor in understanding changing precipitation extremes in the U.S. West.}
+%The contribution of human-induced increases in greenhouse gases to the character of precipitation is confounded by patterns of variability in the atmospheric circulation. Consistent with previous studies, changes in more extreme precipitation follow the Clausius-Clapeyron relationship more closely than total precipitation amount. Changes in the magnitude of ENSO remain a major source of uncertainty. However, the character of ENSO appears to be a very important contributor in understanding changing precipitation extremes in the U.S. West.
 
 %references:
 %***Changes in temperature and precipitation extremes in the CMIP5 ensemble.pdf is a good resources for changes of pr globally. see Figure 4 to 5. Could add this to discussion part
@@ -775,7 +778,7 @@ The contribution of human-induced increases in greenhouse gases to the character
 
 \acknowledgments
 
-The authors would like to thank Michael Wehner for sharing the dataset and many suggestions. The authors also want to thank Alan M. Rhoades for providing the simulation output. We acknowledge the substantial efforts behind the datasets used in this study, including UW, NCDC and NARR. The simulation data used is available by request at xyhuang@ucdavis.edu. This project is supported in part by the xxx and by the xxx.
+The authors would like to thank Michael Wehner for sharing the 0.25$^\circ$ uniform-resolution CESM dataset, and his many suggestions. The authors also want to thank Alan M. Rhoades for providing the simulation output and providing his feedback on the manuscript. We acknowledge the substantial efforts behind the datasets used in this study, including UW, NCDC and NARR. The simulation data used is available by request at xyhuang@ucdavis.edu. This project is supported in part by the University of California, Davis and by the Department of Energy ``Multiscale Methods for Accurate, Efficient, and Scale-Aware Models of the Earth System'' project. Support also comes from the California Agricultural Experiment Station (project CA-D-LAW-2203-H). 
 
  \bibliographystyle{ametsoc2014}
  \bibliography{database2015}
@@ -811,26 +814,25 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 \end{center}
 \end{table}
 
+\clearpage
 
 %\subsection{Figures}
 
 %Figure 1
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{gridmesh.pdf}
+\includegraphics[width=5in]{gridmesh_mod.pdf}
 \caption{(a) The approximate grid spacing used for the VR-CESM 0.25$^\circ$ mesh. (b) A depiction of the transition from the global $1^\circ$ resolution mesh through two layers of refinement to $0.25^\circ$. (c) Topography height over the study area.}
 \label{fig:gridmesh}
 \end{center}
 \end{figure}  
-
-{\color{red} update the mesh grid plot}
 
 %{\color{red}might add some notes on the study area on the topo panel}
 
 %Figure 2
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{wd_index_Hist_ref_annual_part1.pdf}
+\includegraphics[width=6in, trim={3.2cm 6.5cm 5.2cm 4.9cm},clip]{wd_index_Hist_ref_annual_part1.pdf}
 \caption{Mean precipitation and associated indices from VR-CESM and reference datasets over the historical period, 1980-2005.  Areas with statistically significance differences are marked with stippling.}
 \label{fig:histEval1}
 \end{center}
@@ -839,7 +841,7 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 %Figure 3
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{wd_index_Hist_ref_annual_part2.pdf}
+\includegraphics[width=6in, trim={4cm 6.5cm 4cm 4.9cm},clip]{wd_index_Hist_ref_annual_part2.pdf}
 \caption{Mean precipitation and associated indices from VR-CESM and reference datasets over the historical period, 1980-2005 (continued).}
 \label{fig:histEval2}
 \end{center}
@@ -848,7 +850,7 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 %Figure 4
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{wd_index_Hist_ref_annual_part3.pdf}
+\includegraphics[width=6in, trim={0.6cm 4.5cm 1.2cm 4.9cm},clip]{wd_index_Hist_ref_annual_part3.pdf}
 \caption{Mean precipitation and associated indices from VR-CESM and reference datasets over the historical period, 1980-2005 (continued).}
 \label{fig:histEval3}
 \end{center}
@@ -856,18 +858,18 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 %{\color{red}how about switch the row and column?}
 
 %Figure 5
-\begin{sidewaysfigure}
+\begin{figure}
 \begin{center}
 \includegraphics[width=6in]{pr_mean_clm.pdf}
 \caption{The mean precipitation (Pr), 2m average temperature (Tavg), and 2m relative humidity (RH) averaged over each time period.  Areas with statistically significance differences are marked with stippling.}
 \label{fig:meanClm}
 \end{center}
-\end{sidewaysfigure}
+\end{figure}
 
 %Figure 6
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in, angle = 90]{wd_index_all_years_part1.pdf}
+\includegraphics[width=6in, angle = -90]{wd_index_all_years_part1.pdf}
 \caption{Differences of precipitation indices Pr (mm/day), SDII and R$\ast$mm between \textsf{hist}, \textsf{mid} and \textsf{end} average.  Areas with statistically significance differences are marked with stippling.}
 \label{fig:difIndex1}
 \end{center}
@@ -879,7 +881,7 @@ The authors would like to thank Michael Wehner for sharing the dataset and many 
 %Figure 7
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in, angle = 90]{wd_index_all_years_part2.pdf}
+\includegraphics[width=6in, angle = -90]{wd_index_all_years_part2.pdf}
 \caption{Differences of precipitation indices Pr (mm/year) and P$\ast$mm between \textsf{hist}, \textsf{mid} and \textsf{end} average.  Areas with statistically significance differences are marked with stippling.}
 \label{fig:difIndex2}
 \end{center}

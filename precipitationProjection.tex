@@ -85,7 +85,7 @@
 %
 % Enter your Abstract here
 
-\abstract{The changing character of precipitation frequency and intensity in the western United States over the 21st century is investigated using an ensemble of 26-year simulations with the variable-resolution Community Earth System Model (VR-CESM) at a local grid resolution of $\sim$0.25$^\circ$.  Simulations are forced using prescribed sea-surface temperatures, sea-ice extent and greenhouse gas concentrations from the representative concentration pathway (RCP) 8.5 scenario.  VR-CESM is shown to be effective at accurately capturing the spatial patterns of the historical precipitation climatology. In the Intermountain West and Southwest U.S. we observe a statistically significant increase in mean precipitation and rainy days through mid-century, although this trend is tampered by end of century in response to a decrease in relative humidity.  In the Pacific Northwest, extreme precipitation events are observed to increase significantly as a result of increased cool season integrated vapor transport.  In particular, extreme precipitation in this region appears to increase more rapidly than would be predicted by the Clausius-Clapeyron relationship.  No clear climate signal emerges in mean precipitation or for extremes in California, where the precipitation climatology is subject to large interannual variability that is tied more closely to ENSO.}
+\abstract{The changing character of precipitation frequency and intensity in the western United States over the 21st century is investigated using an ensemble of 26-year simulations with the variable-resolution Community Earth System Model (VR-CESM) at a local grid resolution of $\sim$0.25$^\circ$.  Simulations are forced using prescribed sea-surface temperatures, sea-ice extent and greenhouse gas concentrations from the representative concentration pathway (RCP) 8.5 scenario.  VR-CESM is shown to be effective at accurately capturing the spatial patterns of the historical precipitation climatology. In the Intermountain West and Southwest U.S., we observe a statistically significant increase in mean precipitation and rainy days through mid-century, although this trend is tampered by end of century in response to a decrease in relative humidity.  In the Pacific Northwest, extreme precipitation events are observed to increase significantly as a result of increased cool season integrated vapor transport.  In particular, extreme precipitation in this region appears to increase more rapidly than would be predicted by the Clausius-Clapeyron relationship.  No clear climate signal emerges in mean precipitation or for extremes in California, where the precipitation climatology is subject to large interannual variability that is tied more closely to ENSO.}
 
 
 %In accordance with the Clausius-Clapeyron (C-C) relationship, accompanied by the constrained water influx and soil moisture, changes to extreme precipitation hypothesized to follow the C-C relationship more closely than total precipitation amount. Future relative humidity (RH) is constrained by competing increases in both temperature and atmospheric water vapor content, indicating that continental evaporation and oceanic water vapor transport are insufficient vapor sources when temperature reaches a certain level. There is a statistically significant increase in mean precipitation and non-extreme rainy days over the Intermountain West and Southwest U.S. when going to mid-century, although this trend is not kept to the end-of-century. Over the Northwest, extreme precipitation events have increased significantly, driven by increased integrated water vapor transport (IVT) over the eastern Pacific Ocean. However, no clear climate signal in mean precipitation or extremes is exhibited over most of California area, with large interannual variability, dominated primarily by ENSO. ENSO is a major driver of precipitation character through California, the intermountain west and the southwest with intensified impacts in the future.} 
@@ -753,7 +753,7 @@ In this study, an ensemble of 26-year simulations have been conducted using VR-C
 
 Evaluated against historical reanalysis and gridded data, VR-CESM was found to accurately capture the spatial patterns of precipitation, including precipitation frequency and intensity, although it exhibited an overestimation of precipitation over the eastern flank of the Cascades, throughout California's Central Valley and along the Sierra Nevada.  Nonetheless, there was clear improvement in the representation of precipitation features when compared with coarse 1$^\circ$ resolution simulations.
 
-Both mean changes to precipitation and distributions of both non-extreme and extreme events projected by the VR-CESM model under climate forcing.  Although constrained by water influx and soil moisture, changes to extreme precipitation are hypothesized to follow the C-C relationship more closely than total precipitation amount. 
+Both mean changes to precipitation and distributions of both non-extreme and extreme events, projected by the VR-CESM model under climate forcing, have been investigated.  Although constrained by water influx and soil moisture, changes to extreme precipitation are hypothesized to follow the C-C relationship more closely than total precipitation amount. 
 
 From the VR-CESM results, the warming response to the RCP8.5 climate forcing exhibited roughly uniform character, although warming was more pronounced away from the coast and to the north.  Future relative humidity (RH) was observed to be constrained by competing increases in both temperature and atmospheric water vapor content. RH tended to increase in regions where average temperature increase was below $\sim$2 K, and decrease when average temperature increase exceeded $\sim$2 K. This suggests that continental evaporation and oceanic water vapor transport are insufficient vapor sources to maintain RH levels above a certain threshold temperature.  In response, mean precipitation increase is fairly inhomogeneous, with a more pronounced increase in the Northwest where vapor transport is enhanced.  %Modest increases in precipitation through mid-century through the intermountain west and southwest region tended to reverse through the end-of-century.  %However, dry areas including the intermountain west and southwest regions tend to keep dry when Tavg keeps increasing to the end of 21st century.
 
@@ -869,7 +869,7 @@ The authors would like to thank Michael Wehner for sharing the 0.25$^\circ$ unif
 %Figure 6
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in, angle = -90]{wd_index_all_years_part1.pdf}
+\includegraphics[width=6in]{wd_index_all_years_part1.pdf} %, angle = 90
 \caption{Differences of precipitation indices Pr (mm/day), SDII and R$\ast$mm between \textsf{hist}, \textsf{mid} and \textsf{end} average.  Areas with statistically significance differences are marked with stippling.}
 \label{fig:difIndex1}
 \end{center}
@@ -891,7 +891,7 @@ The authors would like to thank Michael Wehner for sharing the 0.25$^\circ$ unif
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{discussion_indices.pdf}
-\caption{Changes of specific humidity and horizontal wind pattern at 850hPa for moisture flux illustration, and IVT for simulations under different time period of wet season (October to March) averaged over 26 years. (Note: The minimum wind vector is set to be 0.5 m/s, therefore, the wind less than 0.5 m/s is also plotted at the minimum length for better visualization.) {\color{red}Specific humidity and wind pattern are averaged over all days over cool season rather than days with Pr>10mm.}}
+\caption{Changes of specific humidity and horizontal wind pattern at 850hPa (unit: m/s) for moisture flux illustration, and IVT (dividing into (a) when 10mm$<$Pr$<=$40mm and (b) when Pr$>$40mm) for simulations under different time period of wet season (October to March) averaged over 26 years. (Note: The minimum wind vector is set to be 0.5 m/s, therefore, the wind less than 0.5 m/s is also plotted at the minimum length for better visualization.) {\color{red}Specific humidity and wind pattern are averaged over all days over cool season rather than days with Pr$>$10 mm.}}
 \label{fig:discussIndex}
 \end{center}
 \end{figure}
@@ -900,7 +900,7 @@ The authors would like to thank Michael Wehner for sharing the 0.25$^\circ$ unif
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{PP_PDF_region1_4.pdf}
-\caption{Frequency distribution of rainy days (Pr$>=$0.1mm$/$day) over the three time periods from simulations in four regions (with logarithmic vertical scale). (Note: Region (a) to (d) cover Washington and Oregon; California (except northern part, i.e. latitude no larger than 38$^\circ$); Nevada and Utah; Arizona and New Mexico, respectively.)}
+\caption{Frequency distribution of rainy days (Pr$>=$0.1mm$/$day) over the three time periods from all simulations dataset in four regions (with logarithmic vertical scale). (Note: Region (a) to (d) cover Washington and Oregon; California (except northern part, i.e. latitude no larger than 38$^\circ$); Nevada and Utah; Arizona and New Mexico, respectively.)}
 \label{fig:prPDF}
 \end{center}
 \end{figure}
@@ -919,7 +919,7 @@ The authors would like to thank Michael Wehner for sharing the 0.25$^\circ$ unif
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{discussion_enso.pdf}
-\caption{Changes of IVT for simulations under different phases of ENSO of wet season (October to March) over rainy days averaged yearly, with seasonal mean wind patterns at 850hPa(Note: The minimum wind vector is set to be 0.5 m/s, therefore, the wind less than 0.5 m/s is also plotted at the minimum length for better visualization.)}
+\caption{Changes of IVT for simulations under different phases of ENSO of wet season (October to March) over rainy days averaged yearly, with seasonal mean wind patterns at 850hPa (unit: m/s) (Note: The minimum wind vector is set to be 0.5 m/s, therefore, the wind less than 0.5 m/s is also plotted at the minimum length for better visualization.)}
 \label{fig:discussEnso}
 \end{center}
 \end{figure}

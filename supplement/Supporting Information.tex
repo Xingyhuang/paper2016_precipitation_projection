@@ -110,17 +110,18 @@ This supplement to the manuscript includes:
 
 \item Figure S4: The monthly ONI index values for each time period.
 
-\item Figure S5: Differences of precipitation indices Pr and R$\ast$mm between warm and cool phases of ENSO over the historical period for VR-CESM and reference datasets.
+\item Figure S5: The comparison of the precipitation results from VR-CESM and CESM 1$^\circ$ over the historical period, 1980-2005, contrasted to the reference datasets (UW and CPC) and the uniform CESM at 0.25$^\circ$ (FV).
 
-\item Figure S6: Spatial pattern of surface temperature anomalies when averaged over the warm and cool phases of ENSO of each time period.
+\item Figure S6: Differences of precipitation indices Pr and R$\ast$mm between warm and cool phases of ENSO over the historical period for VR-CESM and reference datasets.
 
-\item Figure S7: F-test significance of ENSO and GHG factors obtained from ANOVA output.
+\item Figure S7: Spatial pattern of surface temperature anomalies when averaged over the warm and cool phases of ENSO of each time period.
 
-\item Figure S8: The magnitude of the linear fitted regression response for mean precipitation and associated indices related with each factor.
+\item Figure S8: F-test significance of ENSO and GHG factors obtained from ANOVA output.
+
+\item Figure S9: The coefficient magnitude of the linear fitted regression response for mean precipitation and associated indices related to each factor.
 
 %\end{itemize}
 \end{enumerate}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MAIN BODY OF PAPER
@@ -239,7 +240,7 @@ This supplement to the manuscript includes:
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{wd_index_member_minus_ensembleMean_annual_Hist.pdf}
-\caption{The differences in Pr indices between each run and the ensemble mean averaged annually for the historical time period.}
+\caption{The differences in Pr indices between each run and the ensemble mean averaged annually for the historical time period (1980-2005).}
 \label{fig:S1}
 \end{center}
 \end{figure}
@@ -247,7 +248,7 @@ This supplement to the manuscript includes:
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{wd_index_member_minus_ensembleMean_annual_Mid.pdf}
-\caption{The differences in Pr indices between each run and the ensemble mean averaged annually for the mid-century.}
+\caption{The differences in Pr indices between each run and the ensemble mean averaged annually for the mid-century period (2025-2050).}
 \label{fig:S2}
 \end{center}
 \end{figure}
@@ -255,11 +256,10 @@ This supplement to the manuscript includes:
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{wd_index_member_minus_ensembleMean_annual_End.pdf}
-\caption{The differences in Pr indices between each run and the ensemble mean averaged annually for the end-century.}
+\caption{The differences in Pr indices between each run and the ensemble mean averaged annually for the end-century period (2075-2100).}
 \label{fig:S3}
 \end{center}
 \end{figure}
-
 
 %%%%S4%%%%%%%%
 
@@ -268,16 +268,15 @@ This supplement to the manuscript includes:
 \includegraphics[width=6in]{indices_oni.pdf}
 \caption{The ONI index values for each time period based on the prescribed SST dataset with detrending (in $^\circ$C ).}
 \end{center}
-\label{fig:S2}
+\label{fig:S5}
 \end{figure}
 
-
-%%%%S5%%%%%%%%
+%%%S5%%%%%%%
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{wd_index_enso_ref_wetSeason.pdf}
-\caption{Differences of precipitation indices Pr and R$\ast$mm between warm and cool phases of ENSO over the historical period for VR-CESM and reference datasets.}
+\includegraphics[width=6in]{wd_index_hist_vr_vs_1deg_cesm.pdf}
+\caption{Mean precipitation and associated indices from VR-CESM and CESM at the resolution of 1$^\circ$ over the historical period, 1980-2005, contrasted to the reference datasets (UW and CPC) and the uniform CESM at 0.25$^\circ$ (FV).}
 \end{center}
 \label{fig:S4}
 \end{figure}
@@ -286,30 +285,40 @@ This supplement to the manuscript includes:
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{sst_enso.pdf}
-\caption{Spatial pattern of surface temperature anomalies when averaged over the warm and cool phases of ENSO of each time period.}
+\includegraphics[width=6in]{wd_index_enso_ref_wetSeason.pdf}
+\caption{Differences of precipitation indices Pr and R$\ast$mm between warm and cool phases of ENSO over the historical period for VR-CESM and reference datasets.}
 \end{center}
-\label{fig:S5}
+\label{fig:S6}
 \end{figure}
 
 %%%%S7%%%%%%%%
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{lm_fit_pvalue.pdf}
-\caption{F-test significance of ENSO and GHG factors obtained from ANOVA output. The red colored area corresponds to the region where the specific factor has significant effect at the level of 0.001.}
+\includegraphics[width=6in]{sst_enso.pdf}
+\caption{The spatial pattern of surface temperature anomalies when averaged over the warm and cool phases of ENSO of each time period.}
 \end{center}
-\label{fig:S6}
+\label{fig:S7}
 \end{figure}
 
 %%%%S8%%%%%%%%
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{wd_lmfit_coef_enso_ghg.pdf}
-\caption{The magnitude of the linear fitted regression response for mean precipitation and associated indices related with each factor.}
+\includegraphics[width=6in]{lm_fit_pvalue.pdf}
+\caption{The F-test significance of ENSO and GHG factors obtained from ANOVA output. The red colored area corresponds to the region where the specific factor has a significant effect at the level of 0.001.}
 \end{center}
-\label{fig:S7}
+\label{fig:S8}
+\end{figure}
+
+%%%%S9%%%%%%%%
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=6in]{wd_lmfit_coef_enso_ghg.pdf}
+\caption{The coefficient magnitude of the linear fitted regression response for mean precipitation and associated indices related to each factor.}
+\end{center}
+\label{fig:S9}
 \end{figure}
 
 
